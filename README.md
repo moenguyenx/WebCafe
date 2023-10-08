@@ -11,4 +11,5 @@ I. Xác định vấn đề của hệ thống hiện tại
      + Đối với khách hàng: có thể quét QR vào trang web để order tại bàn, xem tổng số tiền phải thanh toán (xem xét thêm chức năng thanh toán)
      + Đối với chủ (nhân viên): khi khách hàng order trên hệ thống sẽ hiển thị lên dashboard của admin bàn nào gọi đồ gì..., xem tổng số tiền, doanh thu
 
-   - ![MicrosoftTeams-image](https://github.com/moenguyenx/WebCafe/assets/130982716/5ce517e2-66ae-4595-9157-01290f68396e)
+   - Từng thông tin vào/ra hệ thống
+   - Từng hành vi hệ thống
