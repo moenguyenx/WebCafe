@@ -13,3 +13,6 @@ I. Xác định vấn đề của hệ thống hiện tại
 
    - Từng thông tin vào/ra hệ thống
    - Từng hành vi hệ thống
+
+
+uyhuybyubyubuy
