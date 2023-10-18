@@ -5,7 +5,7 @@ def create_app():
     app = Flask(__name__)
 
     # with app.app_context():
-    #     app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///cafe.fb"
+    #     app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///cafe.db"
     #     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     return app
 
