@@ -15,4 +15,3 @@ I. Xác định vấn đề của hệ thống hiện tại
    - Từng hành vi hệ thống
 
 
-uyhuybyubyubuy
