@@ -18,5 +18,10 @@ def home():
     return render_template("index.html")
 
 
+@app.route("/hihi")
+def test():
+    return "<h1>Testing"
+
+
 if __name__ == "__main__":
     app.run(debug=True)
