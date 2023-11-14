@@ -20,7 +20,7 @@ def home():
 
 @app.route("/hihi")
 def test():
-    return "<h1>Testing"
+    return "<h1>Testing in develop branch"
 
 
 if __name__ == "__main__":
