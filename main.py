@@ -1,26 +1,21 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 
 def create_app():
     app = Flask(__name__)
-
-    # with app.app_context():
-    #     app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///cafe.db"
-    #     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     return app
 
 
 app = create_app()
 
 
-@app.route("/")
-def home():
-    return render_template("index.html")
+@app.route("/", methods=["GET", "POST"])
+def order():
+    if request.method == "GET":
+        return render_template("index.html")
 
-
-@app.route("/hihi")
-def test():
-    return "<h1>Testing in develop branch"
+    if request.method == "POST":
+        pass
 
 
 if __name__ == "__main__":
