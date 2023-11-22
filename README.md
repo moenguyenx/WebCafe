@@ -13,8 +13,9 @@ I. Xác định vấn đề của hệ thống hiện tại
 
    - Từng thông tin vào/ra hệ thống
    - Từng hành vi hệ thống
+   ![image](https://github.com/moenguyenx/WebCafe/assets/130982716/8ecf267d-0378-4192-a04c-cbed031a7b64)
+
+
 
 
 uyhuybyubyubuy
-
-allooooo
