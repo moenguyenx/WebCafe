@@ -9,6 +9,7 @@ let quantity = document.querySelector('.quantity');
 openShopping.addEventListener('click', ()=>{
     body.classList.add('active');
 })
+
 closeShopping.addEventListener('click', ()=>{
     body.classList.remove('active');
 })
@@ -51,8 +52,11 @@ let products = [
         price: 120000
     }
 ];
+
 let listCards  = [];
-function initApp(){
+
+function initApp()
+{
     products.forEach((value, key) =>{
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
@@ -64,23 +68,30 @@ function initApp(){
         list.appendChild(newDiv);
     })
 }
+
 initApp();
-function addToCard(key){
-    if(listCards[key] == null){
+
+function addToCard(key)
+{
+    if(listCards[key] == null)
+    {
         // copy product form list to list card
         listCards[key] = JSON.parse(JSON.stringify(products[key]));
         listCards[key].quantity = 1;
     }
     reloadCard();
 }
-function reloadCard(){
+
+function reloadCard()
+{
     listCard.innerHTML = '';
     let count = 0;
     let totalPrice = 0;
     listCards.forEach((value, key)=>{
         totalPrice = totalPrice + value.price;
         count = count + value.quantity;
-        if(value != null){
+        if(value != null)
+        {
             let newDiv = document.createElement('li');
             newDiv.innerHTML = `
                 <div><img src="static/image/${value.image}"/></div>
@@ -97,10 +108,14 @@ function reloadCard(){
     total.innerText = totalPrice.toLocaleString();
     quantity.innerText = count;
 }
-function changeQuantity(key, quantity){
-    if(quantity == 0){
+
+function changeQuantity(key, quantity)
+{
+    if(quantity == 0)
+    {
         delete listCards[key];
-    }else{
+    }else
+    {
         listCards[key].quantity = quantity;
         listCards[key].price = quantity * products[key].price;
     }
