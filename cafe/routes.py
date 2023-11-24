@@ -6,11 +6,10 @@ from flask import render_template, request
 @app.route("/", methods=["GET", "POST"])
 def order():
     if request.method == "GET":
-        drink_list = menu.find()
-        return render_template("index.html", drink_list=drink_list)
+        drink_list = list(menu.find())  # Converted from a cursor into a list for convenient pass
+        print(drink_list)
+        return render_template("index.html", drink_list=json.dumps(drink_list))
 
     if request.method == "POST":
         data = request.get_json()
         pass
-
-
