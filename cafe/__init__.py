@@ -10,6 +10,7 @@ mongo = PyMongo(app)
 menu = mongo.db.menu
 orders = mongo.db.orders
 users = mongo.db.users
+finance = mongo.db.finance
 
 from cafe import routes
 
