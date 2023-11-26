@@ -32,9 +32,10 @@
         </div>
     </div>
 
-    <script src="static/js/app.js"></script>
-<!--    <script>-->
-<!--        var drink_list = JSON.parse("{{ drink_list|safe }}")-->
-<!--    </script>-->
+    <script src="static/js/app.js" defer>
+    </script>
+    <script>
+        var drink_list = JSON.parse('{{ drink_list|safe }}')
+    </script>
 </body>
 </html>
