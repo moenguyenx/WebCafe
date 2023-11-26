@@ -6,6 +6,12 @@ let body = document.querySelector('body');
 let total = document.querySelector('.total');
 let quantity = document.querySelector('.quantity');
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Now you can use the drink_list in your JavaScript code
+    console.log(drink_list);
+    // Do something with drink_list
+});
+
 openShopping.addEventListener('click', ()=>{
     body.classList.add('active');
 })
