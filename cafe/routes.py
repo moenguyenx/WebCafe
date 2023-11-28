@@ -1,6 +1,7 @@
 import json
 from cafe import app, menu
-from flask import render_template, request
+from flask import render_template, request, redirect, url_for
+from cafe.forms import LoginForm
 
 
 @app.route("/", methods=["GET", "POST"])
@@ -13,3 +14,16 @@ def order():
     if request.method == "POST":
         data = request.get_json()
         pass
+
+
+@app.route("/login", methods=['GET', 'POST'])
+def login():
+    form = LoginForm()
+    if form.validate_on_submit():
+        return redirect(url_for('display_dashboard'))
+    return render_template('login.html', form=form)
+
+
+@app.route("/dashboard")
+def display_dashboard():
+    return render_template('dashboard.html')
