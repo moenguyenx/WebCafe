@@ -25,14 +25,19 @@ def order(table_num):
         return new_order
 
 
-@app.route("/login", methods=['GET', 'POST'])
+@app.route("/", methods=['GET', 'POST'])
 def login():
     form = LoginForm()
-    if form.validate_on_submit():
-        return redirect(url_for('display_dashboard'))
+    # if form.validate_on_submit():
+    #     return redirect(url_for('display_dashboard'))
     return render_template('login.html', form=form)
 
 
-@app.route("/dashboard")
-def display_dashboard():
-    return render_template('dashboard.html')
+@app.route("/staff/dashboard", methods=['GET', 'POST'])
+def display_staff_dashboard():
+    return render_template('staff_dashboard.html')
+
+
+@app.route("/admin/dashboard", methods=['GET', 'POST'])
+def display_admin_dashboard():
+    return render_template('admin_dashboard.html')
