@@ -5,7 +5,6 @@ from cafe.forms import LoginForm
 from cafe.get_time import get_current_time
 
 
-@app.route("/", methods=["GET", "POST"])
 @app.route("/order/table/<int:table_num>", methods=['GET', 'POST'])
 def order(table_num):
     if request.method == "GET":
