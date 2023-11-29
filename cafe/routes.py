@@ -1,5 +1,5 @@
 import json
-from cafe import app, menu, orders
+from cafe import app, menu, orders, users, finance
 from flask import render_template, request, redirect, url_for
 from cafe.forms import LoginForm
 from cafe.get_time import get_current_time

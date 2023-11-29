@@ -31,7 +31,7 @@ function initApp()
         newDiv.innerHTML = `
             <img src="${value.img_src}">
             <div class="title">${value.name}</div>
-            <div class="price">${value.price.toLocaleString()}</div>
+            <div class="price">${value.price.toLocaleString()}đ</div>
             <button onclick="addToCard(${key})">Add To Card</button>`;
         list.appendChild(newDiv);
     })
