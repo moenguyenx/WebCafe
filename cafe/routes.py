@@ -1,11 +1,13 @@
 import json
-from cafe import app, menu
+from cafe import app, menu, orders
 from flask import render_template, request, redirect, url_for
 from cafe.forms import LoginForm
+from cafe.get_time import get_current_time
 
 
 @app.route("/", methods=["GET", "POST"])
-def order():
+@app.route("/order/table/<int:table_num>", methods=['GET', 'POST'])
+def order(table_num):
     if request.method == "GET":
         drink_list = list(menu.find())  # Converted from a cursor into a list for convenient pass
         print(drink_list)
@@ -13,7 +15,15 @@ def order():
 
     if request.method == "POST":
         data = request.get_json()
-        pass
+        new_order = {
+            "_id": get_current_time(),
+            "table": table_num,
+            "order": data['order'],
+            "total": data['total'],
+            "status": "New"
+        }
+        # orders.insert(new_order)
+        return new_order
 
 
 @app.route("/login", methods=['GET', 'POST'])
