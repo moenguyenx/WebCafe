@@ -2,7 +2,7 @@ import json
 from cafe import app, menu, orders, users, finance
 from flask import render_template, request, redirect, url_for
 from cafe.forms import LoginForm
-from cafe.get_time import get_current_time
+from cafe.get_time import get_date, get_current_time
 
 
 @app.route("/order/table/<int:table_num>", methods=['GET', 'POST'])
@@ -15,7 +15,7 @@ def order(table_num):
     if request.method == "POST":
         data = request.get_json()
         new_order = {
-            "_id": get_current_time(),
+            "date": get_date(),
             "table": table_num,
             "order": data['order'],
             "total": data['total'],
@@ -41,3 +41,8 @@ def display_staff_dashboard():
 @app.route("/admin/dashboard", methods=['GET', 'POST'])
 def display_admin_dashboard():
     return render_template('admin_dashboard.html')
+
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    return render_template('register.html')
