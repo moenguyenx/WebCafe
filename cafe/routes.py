@@ -1,7 +1,6 @@
 import json
 from cafe import app, menu, orders, users, finance
 from flask import render_template, request, redirect, url_for
-from cafe.forms import LoginForm
 from cafe.get_time import get_date, get_current_time
 
 
@@ -21,21 +20,30 @@ def order(table_num):
             "total": data['total'],
             "status": "New"
         }
-        # orders.insert(new_order)
-        return new_order
+        orders.insert_one(new_order)
+        return redirect(url_for('order', table_num=table_num))
 
 
 @app.route("/", methods=['GET', 'POST'])
 def login():
-    form = LoginForm()
-    # if form.validate_on_submit():
-    #     return redirect(url_for('display_dashboard'))
-    return render_template('login.html', form=form)
+    return render_template('login.html')
 
 
 @app.route("/staff/dashboard", methods=['GET', 'POST'])
 def display_staff_dashboard():
+    guest_orders = list(orders.find())
+    print(guest_orders)
     return render_template('staff_dashboard.html')
+
+
+@app.route("/staff/finished-orders")
+def display_finished_orders():
+    return render_template('staff_finished_orders.html')
+
+
+@app.route("/staff/products")
+def display_staff_products():
+    return render_template('staff_products.html')
 
 
 @app.route("/admin/dashboard", methods=['GET', 'POST'])
