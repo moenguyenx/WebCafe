@@ -129,3 +129,8 @@ header .shopping span{
 .listCard .count{
     margin: 0 10px;
 }
+.card.tieude h4{
+    position: relative;
+    color: #fff;
+    align-items: end;
+}
