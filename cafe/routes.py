@@ -43,6 +43,21 @@ def display_admin_dashboard():
     return render_template('admin_dashboard.html')
 
 
+@app.route("/admin/orders")
+def display_admin_orders():
+    return render_template('admin_orders.html')
+
+
+@app.route("/admin/products")
+def display_admin_products():
+    return render_template('admin_products.html')
+
+
+@app.route("/admin/reports")
+def display_admin_reports():
+    return render_template('admin_reports.html')
+
+
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     return render_template('register.html')
