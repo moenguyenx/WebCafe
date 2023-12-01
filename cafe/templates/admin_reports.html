@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Staff Dashboard
+Admin Orders
 {% endblock %}
 
 {% block container %}
@@ -17,27 +17,27 @@ Staff Dashboard
           <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">
+                <a class="nav-link d-flex align-items-center gap-2" href="{{ url_for('display_admin_dashboard') }}">
                   <svg class="bi"><use xlink:href="#house-fill"/></svg>
                   Dashboard
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#">
+                <a class="nav-link d-flex align-items-center gap-2" href="{{ url_for('display_admin_orders') }}">
                   <svg class="bi"><use xlink:href="#file-earmark"/></svg>
-                  Finished Orders
+                  Orders
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#">
+                <a class="nav-link d-flex align-items-center gap-2" href="{{ url_for('display_admin_products') }}">
                   <svg class="bi"><use xlink:href="#cart"/></svg>
                   Products
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#">
-                  <svg class="bi"><use xlink:href="#people"/></svg>
-                  Customers
+                <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="{{ url_for('display_admin_reports') }}">
+                  <svg class="bi"><use xlink:href="#graph-up"/></svg>
+                  Reports
                 </a>
               </li>
             </ul>
@@ -63,5 +63,4 @@ Staff Dashboard
       </div>
     </div>
 </div>
-
 {% endblock %}
