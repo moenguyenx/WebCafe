@@ -2,7 +2,7 @@ import json
 from cafe import app, menu, orders, users, finance
 from flask import render_template, request, redirect, url_for
 from cafe.get_time import get_date, get_current_time
-from cafe.query import get_today_revenue, get_total_revenue
+from cafe.query import get_today_revenue, get_total_revenue, get_daily_revenue_list, get_day_list
 import bson.json_util as json_util
 
 
@@ -53,7 +53,9 @@ def display_admin_dashboard():
     today_revenue = get_today_revenue()
     total_revenue = get_total_revenue()
     print(today_revenue)
-    return render_template('admin_dashboard.html', total_revenue=total_revenue, today_revenue=today_revenue)
+    print(get_day_list())
+    return render_template('admin_dashboard.html', total_revenue=total_revenue, today_revenue=today_revenue,
+                           labels=json.dumps(get_day_list()), data=json.dumps(get_daily_revenue_list()))
 
 
 @app.route("/admin/orders")

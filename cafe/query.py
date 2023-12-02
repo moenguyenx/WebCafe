@@ -19,4 +19,18 @@ def get_total_revenue():
     return total_revenue
 
 
+def get_day_list():
+    """
+    :return: Days of active in Finance collection
+    """
+    return [date['date'] for date in finance.find()]
+
+
+def get_daily_revenue_list():
+    """
+    :return: Daily revenue in Finance collection to display on admin dashboard
+    """
+    return [date['revenue'] for date in finance.find()]
+
+
 
