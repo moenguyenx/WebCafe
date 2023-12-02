@@ -1,5 +1,10 @@
 /* globals Chart:false */
-
+document.addEventListener("DOMContentLoaded", function() {
+    // Now you can use the drink_list in your JavaScript code
+    console.log(labels);
+    console.log(data);
+    // Do something with drink_list
+});
 (() => {
   'use strict'
 
@@ -9,25 +14,9 @@
   const myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: [
-        'Sunday',
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-        'Saturday'
-      ],
+      labels: labels,
       datasets: [{
-        data: [
-          20000,
-          21345,
-          18483,
-          24003,
-          23489,
-          24092,
-          12034
-        ],
+        data: data,
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
