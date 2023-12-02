@@ -30,9 +30,9 @@ def login():
 
 
 @app.route("/staff/dashboard", methods=['GET', 'POST'])
-def display_staff_dashboard():
-    guest_orders = list(orders.find())
-    print(guest_orders)
+async def display_staff_dashboard():
+    cursor_guest_orders = await orders.find({'status': 'New'})
+    guest_orders = list(cursor_guest_orders)
     return render_template('staff_dashboard.html')
 
 
