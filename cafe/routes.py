@@ -2,6 +2,8 @@ import json
 from cafe import app, menu, orders, users, finance
 from flask import render_template, request, redirect, url_for
 from cafe.get_time import get_date, get_current_time
+from cafe.query import get_today_revenue, get_total_revenue
+import bson.json_util as json_util
 
 
 @app.route("/order/table/<int:table_num>", methods=['GET', 'POST'])
@@ -30,9 +32,9 @@ def login():
 
 
 @app.route("/staff/dashboard", methods=['GET', 'POST'])
-async def display_staff_dashboard():
-    cursor_guest_orders = await orders.find({'status': 'New'})
-    guest_orders = list(cursor_guest_orders)
+def display_staff_dashboard():
+    guest_orders = json_util.dumps(list(orders.find({'status': 'New'})))
+    print(guest_orders)
     return render_template('staff_dashboard.html')
 
 
@@ -48,7 +50,10 @@ def display_staff_products():
 
 @app.route("/admin/dashboard", methods=['GET', 'POST'])
 def display_admin_dashboard():
-    return render_template('admin_dashboard.html')
+    today_revenue = get_today_revenue()
+    total_revenue = get_total_revenue()
+    print(today_revenue)
+    return render_template('admin_dashboard.html', total_revenue=total_revenue, today_revenue=today_revenue)
 
 
 @app.route("/admin/orders")
