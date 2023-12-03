@@ -27,8 +27,7 @@ def order(table_num):
             "total": total_bill,
             "status": "New"
         }
-        # orders.insert_one(new_order)
-        print(new_order)
+        orders.insert_one(new_order)
         return redirect(url_for('order', table_num=table_num))
 
 
