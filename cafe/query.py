@@ -46,4 +46,12 @@ def get_name_of_drink(drink_id):
     return get_entry['name']
 
 
+def get_price_of_drink(drink_id):
+    """
+        :return: Price of drink from id
+        :param: _id of the drink
+        """
+    get_entry = menu.find_one({'_id': drink_id}, {'price': 1, '_id': 0})
+    return get_entry['price']
+
 
