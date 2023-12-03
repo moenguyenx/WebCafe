@@ -2,7 +2,7 @@ import json
 from cafe import app, menu, orders, users, finance
 from flask import render_template, request, redirect, url_for
 from cafe.get_time import get_date, get_current_time
-from cafe.query import get_today_revenue, get_total_revenue, get_daily_revenue_list, get_day_list
+from cafe.query import get_today_revenue, get_total_revenue, get_daily_revenue_list, get_day_list, get_name_of_drink
 import bson.json_util as json_util
 
 
@@ -35,7 +35,9 @@ def login():
 def display_staff_dashboard():
     guest_orders = json_util.dumps(list(orders.find({'status': 'New'})))
     print(guest_orders)
-    return render_template('staff_dashboard.html')
+    return render_template('staff_dashboard.html',
+                           guest_orders=guest_orders,
+                           name_query_function=get_name_of_drink)
 
 
 @app.route("/staff/finished-orders")
@@ -52,10 +54,11 @@ def display_staff_products():
 def display_admin_dashboard():
     today_revenue = get_today_revenue()
     total_revenue = get_total_revenue()
-    print(today_revenue)
-    print(get_day_list())
-    return render_template('admin_dashboard.html', total_revenue=total_revenue, today_revenue=today_revenue,
-                           labels=json.dumps(get_day_list()), data=json.dumps(get_daily_revenue_list()))
+    return render_template('admin_dashboard.html',
+                           total_revenue=total_revenue,
+                           today_revenue=today_revenue,
+                           labels=json.dumps(get_day_list()),
+                           data=json.dumps(get_daily_revenue_list()))
 
 
 @app.route("/admin/orders")
@@ -71,8 +74,3 @@ def display_admin_products():
 @app.route("/admin/reports")
 def display_admin_reports():
     return render_template('admin_reports.html')
-
-
-@app.route('/register', methods=['GET', 'POST'])
-def register():
-    return render_template('register.html')

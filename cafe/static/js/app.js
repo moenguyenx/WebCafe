@@ -83,7 +83,8 @@ function changeQuantity(key, quantity)
     if(quantity == 0)
     {
         delete listCards[key];
-    }else
+    }
+    else
     {
         listCards[key].quantity = quantity;
         total = quantity * drink_list[key].price;
