@@ -2,27 +2,33 @@ import json
 from cafe import app, menu, orders, users, finance
 from flask import render_template, request, redirect, url_for
 from cafe.get_time import get_date, get_current_time
-from cafe.query import get_today_revenue, get_total_revenue, get_daily_revenue_list, get_day_list, get_name_of_drink
+from cafe.query import *
 import bson.json_util as json_util
 
 
 @app.route("/order/table/<int:table_num>", methods=['GET', 'POST'])
 def order(table_num):
     if request.method == "GET":
+        # Query drink list from database
         drink_list = list(menu.find())  # Converted from a cursor into a list for convenient pass
-        print(drink_list)
         return render_template("index.html", drink_list=json.dumps(drink_list))
 
     if request.method == "POST":
         data = request.get_json()
+        # Calculate total of bill, handle exception could happen in frontend
+        total_bill = 0
+        for drink in data['order']:
+            total_bill += (drink['quantity'] * get_price_of_drink(drink['_id']))
+
         new_order = {
             "date": get_date(),
             "table": table_num,
             "order": data['order'],
-            "total": data['total'],
+            "total": total_bill,
             "status": "New"
         }
-        orders.insert_one(new_order)
+        # orders.insert_one(new_order)
+        print(new_order)
         return redirect(url_for('order', table_num=table_num))
 
 
