@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log(data);
     // Do something with drink_list
 });
+
 (() => {
   'use strict'
 
