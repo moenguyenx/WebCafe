@@ -11,7 +11,8 @@ def order(table_num):
     if request.method == "GET":
         # Query drink list from database
         drink_list = list(menu.find())  # Converted from a cursor into a list for convenient pass
-        return render_template("index.html", drink_list=json.dumps(drink_list))
+        return render_template("index.html",
+                               drink_list=json.dumps(drink_list))
 
     if request.method == "POST":
         data = request.get_json()
@@ -52,7 +53,9 @@ def display_finished_orders():
 
 @app.route("/staff/products")
 def display_staff_products():
-    return render_template('staff_products.html')
+    drink_list = list(menu.find())
+    return render_template('staff_products.html',
+                           drink_list=json.dumps(drink_list))
 
 
 @app.route("/admin/dashboard", methods=['GET', 'POST'])
@@ -71,9 +74,12 @@ def display_admin_orders():
     return render_template('admin_orders.html')
 
 
-@app.route("/admin/products")
+@app.route("/admin/products", methods=['GET', 'POST', 'PATCH', 'DELETE'])
 def display_admin_products():
-    return render_template('admin_products.html')
+    if request.method == "GET":
+        drink_list = list(menu.find())
+        return render_template('admin_products.html',
+                               drink_list=json.dumps(drink_list))
 
 
 @app.route("/admin/reports")
