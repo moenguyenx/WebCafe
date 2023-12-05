@@ -64,3 +64,12 @@ Admin Products
     </div>
 </div>
 {% endblock %}
+
+{% block script %}
+
+  <script>
+    var drink_list = {{ drink_list|safe }}
+    console.log(drink_list)
+  </script>
+
+{% endblock %}

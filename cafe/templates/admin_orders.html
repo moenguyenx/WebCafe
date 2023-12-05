@@ -64,3 +64,12 @@ Admin Orders
     </div>
 </div>
 {% endblock %}
+
+{% block script %}
+
+  <script>
+    var guest_orders = {{ guest_orders|safe }};
+    console.log(guest_orders)
+  </script>
+
+{% endblock%}

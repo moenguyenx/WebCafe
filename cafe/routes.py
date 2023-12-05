@@ -4,6 +4,7 @@ from flask import render_template, request, redirect, url_for
 from cafe.get_time import get_date, get_current_time
 from cafe.query import *
 import bson.json_util as json_util
+from bson import ObjectId
 
 
 @app.route("/order/table/<int:table_num>", methods=['GET', 'POST'])
@@ -37,13 +38,18 @@ def login():
     return render_template('login.html')
 
 
-@app.route("/staff/dashboard", methods=['GET', 'POST'])
+@app.route("/staff/dashboard", methods=['GET', 'PATCH'])
 def display_staff_dashboard():
-    guest_orders = json_util.dumps(list(orders.find({'status': 'New'})))
-    print(guest_orders)
-    return render_template('staff_dashboard.html',
-                           guest_orders=guest_orders,
-                           name_query_function=get_name_of_drink)
+    if request.method == "GET":
+        guest_orders = json_util.dumps(list(orders.find({'status': 'New'})))
+        print(guest_orders)
+        return render_template('staff_dashboard.html',
+                               guest_orders=guest_orders,
+                               name_query_function=get_name_of_drink)
+    if request.method == "PATCH":
+        done_order_id = ObjectId(request.json)
+        orders.update_one({"_id": done_order_id},
+                          {"$set": {"status": "Done"}})
 
 
 @app.route("/staff/finished-orders")
@@ -63,23 +69,28 @@ def display_admin_dashboard():
     today_revenue = get_today_revenue()
     total_revenue = get_total_revenue()
     return render_template('admin_dashboard.html',
-                           total_revenue=total_revenue,
-                           today_revenue=today_revenue,
+                           total_revenue="{:,.0f}".format(total_revenue),
+                           today_revenue="{:,.0f}".format(today_revenue),
                            labels=json.dumps(get_day_list()),
                            data=json.dumps(get_daily_revenue_list()))
 
 
 @app.route("/admin/orders")
 def display_admin_orders():
-    return render_template('admin_orders.html')
+    guest_orders = json_util.dumps(list(orders.find({'status': 'New'})))
+    return render_template('admin_orders.html',
+                           guest_orders=guest_orders)
 
 
-@app.route("/admin/products", methods=['GET', 'POST', 'PATCH', 'DELETE'])
+@app.route("/admin/products", methods=['GET', 'PATCH'])
 def display_admin_products():
     if request.method == "GET":
         drink_list = list(menu.find())
         return render_template('admin_products.html',
                                drink_list=json.dumps(drink_list))
+
+    if request.method == "PATCH":
+        pass
 
 
 @app.route("/admin/reports")
