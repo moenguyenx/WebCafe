@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Staff Dashboard
+Finished Orders
 {% endblock %}
 
 {% block container %}
@@ -17,13 +17,13 @@ Staff Dashboard
           <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="{{ url_for('display_staff_dashboard') }}">
+                <a class="nav-link d-flex align-items-center gap-2" href="{{ url_for('display_staff_dashboard') }}">
                   <svg class="bi"><use xlink:href="#house-fill"/></svg>
                   Dashboard
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="{{ url_for('display_finished_orders') }}">
+                <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="{{ url_for('display_finished_orders') }}">
                   <svg class="bi"><use xlink:href="#file-earmark"/></svg>
                   Finished Orders
                 </a>
@@ -52,7 +52,7 @@ Staff Dashboard
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="{{ url_for('login') }}">
+                <a class="nav-link d-flex align-items-center gap-2" href="#">
                   <svg class="bi"><use xlink:href="#door-closed"/></svg>
                   Sign out
                 </a>
@@ -63,15 +63,5 @@ Staff Dashboard
       </div>
     </div>
 </div>
-
-{% endblock %}
-
-
-{% block script %}
-
-  <script>
-    var order_list = {{ guest_orders|safe }}
-    console.log(order_list)
-  </script>
 
 {% endblock %}
