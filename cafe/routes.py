@@ -35,12 +35,7 @@ def order(table_num):
 
 @app.route("/", methods=['GET', 'POST'])
 def login():
-<<<<<<< HEAD
-    form = LoginForm()
-    return render_template('login.html', form=form)
-=======
     return render_template('login.html')
->>>>>>> 4fa83b7faaccfb2cff9983221874a2ae63a84a7b
 
 
 @app.route("/staff/dashboard", methods=['GET', 'PATCH'])
