@@ -28,8 +28,6 @@ def order(table_num):
 @app.route("/", methods=['GET', 'POST'])
 def login():
     form = LoginForm()
-    # if form.validate_on_submit():
-    #     return redirect(url_for('display_dashboard'))
     return render_template('login.html', form=form)
 
 
