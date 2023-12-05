@@ -1,6 +1,6 @@
 import json
 from cafe import app, menu, orders, users, finance
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, redirect, url_for, jsonify
 from cafe.get_time import get_date, get_current_time
 from cafe.query import *
 import bson.json_util as json_util
@@ -21,6 +21,8 @@ def order(table_num):
         total_bill = 0
         for drink in data['order']:
             total_bill += (drink['quantity'] * get_price_of_drink(drink['_id']))
+
+        update_revenue(total_bill)
 
         new_order = {
             "date": get_date(),
@@ -47,9 +49,11 @@ def display_staff_dashboard():
                                guest_orders=guest_orders,
                                name_query_function=get_name_of_drink)
     if request.method == "PATCH":
-        done_order_id = ObjectId(request.json)
+        request_id = request.json['_id']
+        done_order_id = ObjectId(request_id)
         orders.update_one({"_id": done_order_id},
                           {"$set": {"status": "Done"}})
+        return jsonify({"message": "Successfully updated the database"})
 
 
 @app.route("/staff/finished-orders")
