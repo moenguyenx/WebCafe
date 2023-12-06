@@ -52,6 +52,7 @@ header .shopping span{
 }
 .list .item .title{
     font-weight: 600;
+    position: relative;
 }
 .list .item .price{
     margin: 10px;
@@ -126,9 +127,11 @@ header .shopping span{
     row-gap: 10px;
 }
 .listCard li div{
+    padding: 0%;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .listCard li img{
     margin: 10px 0px;
@@ -147,19 +150,33 @@ header .shopping span{
     margin: 0 10px;
 }
 .card .vovan .tieude {
-    font-size: larger;
+    font-size: xx-large;
     color: rgba(223, 225, 220, 0.685);
     text-align: bottom;
+    text-decoration: none;
 }
 .card .vovan .total {
-    font-size: larger;
-    display: inline-block;
+    font-size: x-large;
     color: #cece7e;
-    vertical-align: middle;
     text-align: center;
-    display: inline-block;
 }
 .card .vovan {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 5fr 5fr;
+}
+.listCard li label{
+    font-size: large;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: left;
+    color: #E8BC0E;
+}
+.listCard li input{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 425px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    outline: none;
+    font-size: medium;
 }
