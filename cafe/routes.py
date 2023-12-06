@@ -1,6 +1,6 @@
 import json
 from cafe import app, menu, orders, users, finance
-from flask import render_template, request, redirect, url_for, jsonify
+from flask import render_template, request, redirect, url_for, jsonify, flash
 from cafe.get_time import get_date, get_current_time
 from cafe.query import *
 import bson.json_util as json_util
@@ -37,6 +37,14 @@ def order(table_num):
 
 @app.route("/", methods=['GET', 'POST'])
 def login():
+    if request.method == "POST":
+        input_username = request.form['username']
+        input_password = request.form['password']
+
+        response = users.find_one({"username": input_username})
+        if response is None:
+            return "DEO TON TAI"
+        return f'{input_username} + {input_password}'
     return render_template('login.html')
 
 
