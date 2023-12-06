@@ -71,8 +71,8 @@ function reloadCard()
                     <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
                 </div>
                 <form class = "Takenot">
-                    <label for = "1"> NOTE </label>
-                    <Input id = "1"  class="Takenote" type = "text" placeholder = "Ít đường,..."></input>
+                    <label for = "1"> Note </label>
+                    <Input id = "1"  class="Takenote" type = "text" placeholder = "Your preferences..."></input>
                 </form>`;
                 listCard.appendChild(newDiv);
         }
