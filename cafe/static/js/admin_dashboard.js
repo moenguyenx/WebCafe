@@ -13,22 +13,25 @@ document.addEventListener("DOMContentLoaded", function() {
   const ctx = document.getElementById('myChart')
   // eslint-disable-next-line no-unused-vars
   const myChart = new Chart(ctx, {
-    type: 'line',
+    type: 'bar',
     data: {
       labels: labels,
       datasets: [{
         data: data,
-        lineTension: 0,
-        backgroundColor: 'transparent',
-        borderColor: '#007bff',
-        borderWidth: 4,
+        backgroundColor: '#007bff',
         pointBackgroundColor: '#007bff'
       }]
     },
     options: {
+      responsive: true,
       plugins: {
         legend: {
+          position: 'top',
           display: false
+        },
+        title: {
+            display: true,
+            text: 'Revenue Chart'
         },
         tooltip: {
           boxPadding: 3
