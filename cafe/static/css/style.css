@@ -68,11 +68,6 @@ header .shopping span{
     width: 100%;
     background-color: #757676;
 }
-[class*="col-"] {
-    width: 100%;
-    float: left;
-    padding: 15px;
-  }
 .card{
     position: fixed;
     top:0;
