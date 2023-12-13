@@ -65,3 +65,12 @@ Finished Orders
 </div>
 
 {% endblock %}
+
+{% block script %}
+
+  <script>
+    var finished_orders = {{ finished_orders|safe }}
+    console.log(finished_orders)
+  </script>
+
+{% endblock %}

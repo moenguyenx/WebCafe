@@ -66,14 +66,16 @@ def display_staff_dashboard():
 
 @app.route("/staff/finished-orders")
 def display_finished_orders():
-    return render_template('staff_finished_orders.html')
+    finished_orders = json_util.dumps(list(orders.find({'status': 'Done'})))
+    return render_template('staff_finished_orders.html',
+                           finished_orders=finished_orders)
 
 
 @app.route("/staff/products")
 def display_staff_products():
     drink_list = list(menu.find())
     return render_template('staff_products.html',
-                           drink_list=json.dumps(drink_list))
+                           drink_list=json_util.dumps(drink_list))
 
 
 @app.route("/admin/dashboard", methods=['GET', 'POST'])
