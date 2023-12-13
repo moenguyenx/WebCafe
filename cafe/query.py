@@ -1,5 +1,6 @@
 from cafe import users, menu, orders, finance
 from cafe.get_time import get_date
+from bson import ObjectId
 
 
 def get_today_revenue():
@@ -47,7 +48,7 @@ def get_name_of_drink(drink_id):
     :return: Name of drink from id
     :param: _id of the drink
     """
-    get_entry = menu.find_one({'_id': drink_id}, {'name': 1, '_id': 0})
+    get_entry = menu.find_one({'_id': ObjectId(drink_id)}, {'name': 1, '_id': 0})
     return get_entry['name']
 
 
@@ -56,7 +57,7 @@ def get_price_of_drink(drink_id):
         :return: Price of drink from id
         :param: _id of the drink
         """
-    get_entry = menu.find_one({'_id': drink_id}, {'price': 1, '_id': 0})
+    get_entry = menu.find_one({'_id': ObjectId(drink_id)}, {'price': 1, '_id': 0})
     return get_entry['price']
 
 

@@ -1,6 +1,6 @@
 import json
 from cafe import app, menu, orders, users, finance
-from flask import render_template, request, redirect, url_for, jsonify
+from flask import render_template, request, redirect, url_for, jsonify, flash
 from cafe.get_time import get_date, get_current_time
 from cafe.query import *
 import bson.json_util as json_util
@@ -13,7 +13,7 @@ def order(table_num):
         # Query drink list from database
         drink_list = list(menu.find())  # Converted from a cursor into a list for convenient pass
         return render_template("index.html",
-                               drink_list=json.dumps(drink_list))
+                               drink_list=json_util.dumps(drink_list))
 
     if request.method == "POST":
         data = request.get_json()
@@ -37,6 +37,14 @@ def order(table_num):
 
 @app.route("/", methods=['GET', 'POST'])
 def login():
+    if request.method == "POST":
+        input_username = request.form['username']
+        input_password = request.form['password']
+
+        response = users.find_one({"username": input_username})
+        if response is None:
+            return "DEO TON TAI"
+        return f'{input_username} + {input_password}'
     return render_template('login.html')
 
 
@@ -91,7 +99,7 @@ def display_admin_products():
     if request.method == "GET":
         drink_list = list(menu.find())
         return render_template('admin_products.html',
-                               drink_list=json.dumps(drink_list))
+                               drink_list=json_util.dumps(drink_list))
 
     if request.method == "PATCH":
         pass
