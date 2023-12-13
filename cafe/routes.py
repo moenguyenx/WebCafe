@@ -13,7 +13,7 @@ def order(table_num):
         # Query drink list from database
         drink_list = list(menu.find())  # Converted from a cursor into a list for convenient pass
         return render_template("index.html",
-                               drink_list=json.dumps(drink_list))
+                               drink_list=json_util.dumps(drink_list))
 
     if request.method == "POST":
         data = request.get_json()
@@ -99,7 +99,7 @@ def display_admin_products():
     if request.method == "GET":
         drink_list = list(menu.find())
         return render_template('admin_products.html',
-                               drink_list=json.dumps(drink_list))
+                               drink_list=json_util.dumps(drink_list))
 
     if request.method == "PATCH":
         pass
