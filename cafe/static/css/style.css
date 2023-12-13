@@ -2,24 +2,34 @@ body{
     background-color: #E3E7E8;
     font-family: system-ui;
 }
-.container{
-    width: 1000px;
+/* General Styles */
+body {
+    font-size: 16px;
+}
+
+.container {
+    width: 90%; /* Adjust as needed */
+    max-width: 1200px; /* Set a maximum width for larger screens */
     margin: auto;
     transition: 0.5s;
 }
-header{
+
+header {
     display: grid;
     grid-template-columns: 1fr 50px;
-    margin-top: 50px;
+    margin-top: 20px; /* Adjust as needed */
 }
-header .shopping{
+
+header .shopping {
     position: relative;
     text-align: right;
 }
-header .shopping img{
-    width: 40px;
+
+header .shopping img {
+    max-width: 100%; /* Make the image responsive */
 }
-header .shopping span{
+
+header .shopping span {
     background: red;
     border-radius: 50%;
     display: flex;
@@ -31,48 +41,62 @@ header .shopping span{
     left: 80%;
     padding: 3px 10px;
 }
-.list{
+
+.list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 20px;
-    row-gap: 20px;
-    margin-top: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px; /* Adjust as needed */
 }
-.list .item{
+
+.list .item {
     text-align: center;
     background-color: #DCE0E1;
     padding: 20px;
-    box-shadow: 0 50px 50px #757676;
+    box-shadow: 0 10px 10px #757676;
     letter-spacing: 1px;
 }
-.list .item img{
-    width: 90%;
+
+.list .item img {
+    max-width: 100%; /* Make the image responsive */
     height: 250px;
     object-fit: cover;
 }
-.list .item .title{
+
+.list .item .title {
     font-weight: 600;
     position: relative;
 }
-.list .item .price{
+
+.list .item .price {
     margin: 10px;
 }
-.list .item button{
+
+.list .item button {
     background-color: #1C1F25;
     color: #fff;
     width: 100%;
     padding: 10px;
     position: relative;
 }
+
+/* Media Queries for Tablet and Desktop */
+@media (min-width: 768px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 75%;
+    }
+}
+
 .item button:hover{
     width: 100%;
     background-color: #757676;
 }
-[class*="col-"] {
-    width: 100%;
-    float: left;
-    padding: 15px;
-  }
 .card{
     position: fixed;
     top:0;
