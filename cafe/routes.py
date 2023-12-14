@@ -52,10 +52,8 @@ def login():
 def display_staff_dashboard():
     if request.method == "GET":
         guest_orders = json_util.dumps(list(orders.find({'status': 'New'})))
-        print(guest_orders)
-        return render_template('staff_dashboard.html',
-                               guest_orders=guest_orders,
-                               name_query_function=get_name_of_drink)
+        return render_template('staff_dashboard.html')
+
     if request.method == "PATCH":
         request_id = request.json['_id']
         done_order_id = ObjectId(request_id)
@@ -137,3 +135,19 @@ def display_admin_products():
 @app.route("/admin/reports")
 def display_admin_reports():
     return render_template('admin_reports.html')
+
+
+@app.route('/get_orders_data')
+def get_orders_data():
+    new_orders = json_util.dumps(list(orders.find({'status': 'New'})))
+    return jsonify(guest_orders=new_orders)
+
+
+@app.route('/get_admin_data')
+def get_admin_data():
+    today_revenue = get_today_revenue()
+    total_revenue = get_total_revenue()
+    return jsonify(total_revenue="{:,.0f}".format(total_revenue),
+                   today_revenue="{:,.0f}".format(today_revenue),
+                   labels=json.dumps(get_day_list()),
+                   data=json.dumps(get_daily_revenue_list()))
