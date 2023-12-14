@@ -96,15 +96,42 @@ def display_admin_orders():
                            guest_orders=guest_orders)
 
 
-@app.route("/admin/products", methods=['GET', 'PATCH'])
+@app.route("/admin/products", methods=['GET', 'PATCH', 'DELETE', 'POST'])
 def display_admin_products():
     if request.method == "GET":
         drink_list = list(menu.find())
         return render_template('admin_products.html',
                                drink_list=json_util.dumps(drink_list))
 
+    if request.method == "POST":
+        new_drink_name = request.form['name']
+        new_drink_price = request.form['price']
+        new_drink_img_src = request.form['img_src']
+        if menu.find_one({'name': new_drink_name.title()}) is None:
+            menu.insert_one(
+                {
+                    'name': new_drink_name.title(),
+                    'price': int(new_drink_price),
+                    'img_src': new_drink_img_src
+                }
+            )
+            return jsonify({'message': 'Successfully added new product'})
+        else:
+            return jsonify({'error': 'Drink already existed'})
+
     if request.method == "PATCH":
-        pass
+        drink_request = request.json
+        drink_id = ObjectId(drink_request['_id'])
+        new_price = drink_request['new_price']
+        menu.update_one({'_id': drink_id},
+                        {'$set': {'price': new_price}})
+        return jsonify({'message': 'Successfully updated price'})
+
+    if request.method == "DELETE":
+        drink_request = request.json
+        drink_id = ObjectId(drink_request['_id'])
+        menu.delete_one({'_id': drink_id})
+        return jsonify({"message": "Successfully deleted item"})
 
 
 @app.route("/admin/reports")
