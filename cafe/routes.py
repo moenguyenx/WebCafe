@@ -97,9 +97,7 @@ def display_admin_orders():
 @app.route("/admin/products", methods=['GET', 'PATCH', 'DELETE', 'POST'])
 def display_admin_products():
     if request.method == "GET":
-        drink_list = list(menu.find())
-        return render_template('admin_products.html',
-                               drink_list=json_util.dumps(drink_list))
+        return render_template('admin_products.html')
 
     if request.method == "POST":
         new_drink_name = request.form['name']
@@ -113,9 +111,9 @@ def display_admin_products():
                     'img_src': new_drink_img_src
                 }
             )
-            return jsonify({'message': 'Successfully added new product'})
+            return jsonify({'status': 'success', 'message': 'Successfully added new product'}), 200
         else:
-            return jsonify({'error': 'Drink already existed'})
+            return jsonify({'status': 'error', 'message': 'Drink already existed'}), 400
 
     if request.method == "PATCH":
         drink_request = request.json
@@ -123,13 +121,13 @@ def display_admin_products():
         new_price = drink_request['new_price']
         menu.update_one({'_id': drink_id},
                         {'$set': {'price': new_price}})
-        return jsonify({'message': 'Successfully updated price'})
+        return jsonify({'status': 'success', 'message': 'Successfully updated price'}), 200
 
     if request.method == "DELETE":
         drink_request = request.json
         drink_id = ObjectId(drink_request['_id'])
         menu.delete_one({'_id': drink_id})
-        return jsonify({"message": "Successfully deleted item"})
+        return jsonify({'status': 'success', "message": "Successfully deleted item"}), 200
 
 
 @app.route("/admin/reports")
@@ -137,17 +135,35 @@ def display_admin_reports():
     return render_template('admin_reports.html')
 
 
+#################################################################################
+# API return specific data
+#################################################################################
 @app.route('/get_orders_data')
 def get_orders_data():
+    """
+    :return: New orders
+    """
     new_orders = json_util.dumps(list(orders.find({'status': 'New'})))
     return jsonify(guest_orders=new_orders)
 
 
 @app.route('/get_admin_data')
 def get_admin_data():
+    """
+    :return: Data for Admin Dashboard
+    """
     today_revenue = get_today_revenue()
     total_revenue = get_total_revenue()
     return jsonify(total_revenue="{:,.0f}".format(total_revenue),
                    today_revenue="{:,.0f}".format(today_revenue),
                    labels=json.dumps(get_day_list()),
                    data=json.dumps(get_daily_revenue_list()))
+
+
+@app.route('/get_menu')
+def get_menu():
+    """
+    :return: Whole menu
+    """
+    drink_list = json_util.dumps(list(menu.find()))
+    return jsonify(menu=drink_list)

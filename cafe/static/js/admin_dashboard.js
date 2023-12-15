@@ -1,9 +1,7 @@
 /* globals Chart:false */
 document.addEventListener("DOMContentLoaded", function() {
-    // Now you can use the drink_list in your JavaScript code
     console.log(labels);
     console.log(data);
-    // Do something with drink_list
 });
 
 (() => {

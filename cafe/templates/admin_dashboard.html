@@ -77,9 +77,17 @@ Admin Dashboard
       </div>
 
       <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
-      <h1 class="h2">Today's revenue: {{ today_revenue }}đ</h1>
-      <br>
-      <h1 class="h2">Total revenue: {{ total_revenue }}đ</h1>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>Today's revenue: {{ today_revenue }}₫</h1>
+          </div>
+          <div class="col-md-6">
+            <h1>Total revenue: {{ total_revenue }}₫</h1>
+          </div>
+        </div>
+      </div>
+      
     </main>
   </div>
 </div>

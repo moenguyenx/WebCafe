@@ -80,8 +80,10 @@ Staff Dashboard
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
   <script>
-    function fetchGuestOrders() {
-      $.ajax({
+    function fetchGuestOrders() 
+    {
+      $.ajax(
+        {
         url: "/get_orders_data",
         type: "GET",
         dataType: "json",
@@ -93,7 +95,7 @@ Staff Dashboard
           // Schedule the next fetch after 5 seconds
           setTimeout(fetchGuestOrders, 5000);
         }
-      });
+        });
     }
 
     function updateGuestOrders(guestOrdersJSON) {
@@ -112,7 +114,7 @@ Staff Dashboard
 
         // Create an HTML string for each order
         var orderHtml =
-          '<div class="col-12 col-md-6 col-lg-3 mb-3">' +
+          '<div class="col-12 col-md-6 col-lg-3 mb-3 mt-3">' +
           '  <div class="card">' +
           '    <div class="card-header">' +
           '      Table: ' + order.table +
@@ -133,7 +135,7 @@ Staff Dashboard
         // Add the order footer with the button
         orderHtml +=
           '    <div class="card-footer bg-auto">' +
-          '      <button class="btn btn-primary btn-block" onclick="sendPatchRequest(\'' + orderId + '\')">Process Order</button>' +
+          '      <button class="btn btn-primary btn-block" onclick="sendPatchRequest(\'' + orderId + '\')">Finish</button>' +
           '    </div>' +
           '  </div>' +
           '</div>';

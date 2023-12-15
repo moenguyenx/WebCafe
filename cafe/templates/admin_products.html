@@ -61,15 +61,187 @@ Admin Products
           </div>
         </div>
       </div>
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <!-- Button to trigger the modal -->
+        <div class="container mt-3 mb-3">
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <button type="button" class="btn btn-primary me-md-2" data-bs-toggle="modal" data-bs-target="#floatingFormModal">
+              Add New Item
+            </button>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="floatingFormModal" tabindex="-1" role="dialog" aria-labelledby="floatingFormModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="floatingFormModalLabel">New Item Form</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                </button>
+              </div>
+              <div class="modal-body">
+                <!-- Your form content goes here -->
+                <form method="post" action="{{ url_for('display_admin_products') }}">
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Name: </label>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Item Name">
+                  </div>
+                  <div class="form-group mt-2">
+                    <label for="exampleFormControlInput1">Price: </label>
+                    <input type="number" name="price" class="form-control" id="price" placeholder="Item Price">
+                  </div>
+                  <div class="form-group mt-2">
+                    <label for="exampleFormControlInput1">Image Source: </label>
+                    <input type="text" name="img_src" class="form-control" id="img_src" placeholder="Image Source">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-outline-primary" data-bs-dismiss="modal" onclick="listenResponse()">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Products Card-->
+        <div class="container">
+          <div id="items-container" class="row">
+
+          </div>
+        </div>
+          
+      </main>
     </div>
 </div>
 {% endblock %}
 
 {% block script %}
-
+  <!-- Include jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script>
-    var drink_list = {{ drink_list|safe }}
-    console.log(drink_list)
+    function listenResponse() {
+        // Prevent the default form submission
+        event.preventDefault();
+
+        // Get form data
+        const formData = new FormData(document.querySelector('form'));
+
+        // Make a POST request to the Flask server
+        fetch("{{ url_for('display_admin_products') }}", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Handle the response from the server
+            if (data.status === 'success') {
+                alert(data.message);  // You can replace this with your desired success handling
+                fetchMenu();
+            } else {
+                alert(data.message);  // You can replace this with your desired error handling
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
+    }
+
+    function fetchMenu()
+    {
+      $.ajax(
+        {
+          url: "/get_menu",
+          type: "GET",
+          dataType: "json",
+          success: function (data) {
+            updateMenu(data.menu);
+          }
+        }
+      );
+    }
+
+    function updateMenu(menuJSON)
+    {
+      //Parse JSON string to get array of drinks
+      var menu = JSON.parse(menuJSON);
+      // Get item container element
+      var itemContainer = $('#items-container');
+
+      //Clear previous content
+      itemContainer.empty();
+
+      menu.forEach(function (drink)
+      {
+        var drinkId = drink._id.$oid;
+
+        var itemHtml =
+          '<div class="col-12 col-md-6 col-lg-3 mb-3 mt-3">'+
+            '<div class="card" style="width: 18rem;">'+
+              '<img class="card-img-top" src="' + drink.img_src + '" alt="Card image cap">'+
+              '<div class="card-body">'+
+                '<h5 class="card-title text-center">' + drink.name + '</h5>'+
+                '<p class="card-text text-center">' + drink.price.toLocaleString('en-US')+ '₫' + '</p>'+
+                '<div class="row d-flex justify-content-center">'+
+                  '<div class="col-12 col-md-6 text-center">'+
+                      '<button class="btn btn-success btn-block position-relative" data-bs-toggle="modal" data-bs-target="#floatingPriceFormModal">Edit Price</button>'+
+                  '</div>'+
+                  '<div class="modal fade" id="floatingPriceFormModal" tabindex="-1" role="dialog" aria-labelledby="floatingPriceFormModalLabel" aria-hidden="true">'+
+                    '<div class="modal-dialog" role="document">'+
+                      '<div class="modal-content">'+
+                        '<div class="modal-header">'+
+                          '<h5 class="modal-title" id="floatingFormModalLabel">Edit Item Price</h5>'+
+                          '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'+
+                        '</div>'+
+                        '<div class="modal-body">'+
+                          '<form>'+
+                            '<div class="form-group">'+
+                              '<label for="exampleFormControlInput1">New Price: </label>'+
+                              '<input type="number" name="price" class="form-control" id="price" placeholder="New price">'+
+                            '</div>'+
+                            '<div class="modal-footer">'+
+                              '<button type="submit" class="btn btn-outline-primary" data-bs-dismiss="modal" onclick="submitForm()">Submit</button>'+
+                            '</div>'+
+                          '</form>'+
+                        '</div>'+
+                      '</div>'+
+                    '</div>'+
+                  '</div>'+
+                  '<div class="col-12 col-md-6 text-center">'+
+                    '<button class="btn btn-danger btn-block position-relative" data-bs-toggle="modal" data-bs-target="#floatingDeleteModal">Delete Item</button>'+
+                  '</div>'+
+                  '<div class="modal fade" id="floatingDeleteModal" tabindex="-1" aria-labelledby="floatingDeleteModal" aria-hidden="true">'+
+                    '<div class="modal-dialog">'+
+                      '<div class="modal-content">'+
+                        '<div class="modal-header">'+
+                          '<h1 class="modal-title fs-5" id="exampleModalLabel">Warning!</h1>'+
+                          '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'+
+                        '</div>'+
+                        '<div class="modal-body">'+
+                          'Are you sure you want to delete?'+
+                        '</div>'+
+                        '<div class="modal-footer">'+
+                          '<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Delete</button>'+
+                        '</div>'+
+                      '</div>'+
+                    '</div>'+
+                  '</div>'+
+                '</div>'+
+              '</div>'+
+            '</div>'+
+          '</div>';
+
+          // Append item HTML to the container
+          itemContainer.append(itemHtml);
+      }
+      );
+    }
+
+    // Start fetching
+    $(document).ready(function () {
+      fetchMenu();
+    }
+    );
+
   </script>
 
 {% endblock %}
