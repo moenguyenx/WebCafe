@@ -174,6 +174,10 @@ Admin Products
       {
         var drinkId = drink._id.$oid;
 
+        // Generate unique IDs for modals
+        var editModalId = 'floatingPriceFormModal_' + drinkId;
+        var deleteModalId = 'floatingDeleteModal_' + drinkId;
+
         var itemHtml =
           '<div class="col-12 col-md-6 col-lg-3 mb-3 mt-3">'+
             '<div class="card" style="width: 18rem;">'+
@@ -183,9 +187,9 @@ Admin Products
                 '<p class="card-text text-center">' + drink.price.toLocaleString('en-US')+ '₫' + '</p>'+
                 '<div class="row d-flex justify-content-center">'+
                   '<div class="col-12 col-md-6 text-center">'+
-                      '<button class="btn btn-success btn-block position-relative" data-bs-toggle="modal" data-bs-target="#floatingPriceFormModal">Edit Price</button>'+
+                      '<button class="btn btn-success btn-block position-relative" data-bs-toggle="modal" data-bs-target="#' + editModalId + '">Edit Price</button>'+
                   '</div>'+
-                  '<div class="modal fade" id="floatingPriceFormModal" tabindex="-1" role="dialog" aria-labelledby="floatingPriceFormModalLabel" aria-hidden="true">'+
+                  '<div class="modal fade" id="' + editModalId + '" tabindex="-1" role="dialog" aria-labelledby="floatingPriceFormModalLabel" aria-hidden="true">'+
                     '<div class="modal-dialog" role="document">'+
                       '<div class="modal-content">'+
                         '<div class="modal-header">'+
@@ -196,10 +200,10 @@ Admin Products
                           '<form>'+
                             '<div class="form-group">'+
                               '<label for="exampleFormControlInput1">New Price: </label>'+
-                              '<input type="number" name="price" class="form-control" id="price" placeholder="New price">'+
+                              '<input type="number" name="newprice" class="form-control" id="newprice_' + drinkId + '" placeholder="New price">'+
                             '</div>'+
                             '<div class="modal-footer">'+
-                              '<button type="submit" class="btn btn-outline-primary" data-bs-dismiss="modal" onclick="submitForm()">Submit</button>'+
+                              '<button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal" onclick="submitNewPrice(\'' + drinkId + '\')">Submit</button>'+
                             '</div>'+
                           '</form>'+
                         '</div>'+
@@ -207,9 +211,9 @@ Admin Products
                     '</div>'+
                   '</div>'+
                   '<div class="col-12 col-md-6 text-center">'+
-                    '<button class="btn btn-danger btn-block position-relative" data-bs-toggle="modal" data-bs-target="#floatingDeleteModal">Delete Item</button>'+
+                    '<button class="btn btn-danger btn-block position-relative" data-bs-toggle="modal" data-bs-target="#' + deleteModalId + '">Delete Item</button>'+
                   '</div>'+
-                  '<div class="modal fade" id="floatingDeleteModal" tabindex="-1" aria-labelledby="floatingDeleteModal" aria-hidden="true">'+
+                  '<div class="modal fade" id="' + deleteModalId + '" tabindex="-1" aria-labelledby="floatingDeleteModal" aria-hidden="true">'+
                     '<div class="modal-dialog">'+
                       '<div class="modal-content">'+
                         '<div class="modal-header">'+
@@ -220,7 +224,7 @@ Admin Products
                           'Are you sure you want to delete?'+
                         '</div>'+
                         '<div class="modal-footer">'+
-                          '<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Delete</button>'+
+                          '<button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="deleteDrink(\'' + drinkId + '\')">Delete</button>'+
                         '</div>'+
                       '</div>'+
                     '</div>'+
@@ -241,6 +245,74 @@ Admin Products
       fetchMenu();
     }
     );
+
+    function submitNewPrice(drinkId)
+    {
+      var newPrice = $('#newprice_' + drinkId).val();
+      var requestData = {
+        "_id": drinkId,
+        "new_price": newPrice
+      };
+      console.log('data', requestData);
+      $.ajax(
+        {
+          url: '/admin/products',
+          type: 'PATCH',
+          contentType: 'application/json',
+          data: JSON.stringify(requestData),
+          success: function(response) {
+            // Handle success
+            console.log('Success:', response);
+            
+            // Check the response status and display an alert
+            if (response.status === 'success') {
+                alert(response.message);
+                fetchMenu();
+            } else {
+                alert('Error updating price: ' + response.message);
+            }
+          },
+          error: function(error) {
+              // Handle error
+              console.error('Error:', error);
+
+              // Display an alert for the error
+              alert('Error updating price. Please try again.');
+          }
+        }
+      );
+    }
+
+    function deleteDrink(drinkId)
+    {
+      $.ajax(
+        {
+          url: '/admin/products',
+          type: 'DELETE',
+          contentType: 'application/json',
+          data: JSON.stringify({"_id": drinkId}),
+          success: function(response) {
+            // Handle success
+            console.log('Success:', response);
+            
+            // Check the response status and display an alert
+            if (response.status === 'success') {
+                alert(response.message);
+                fetchMenu();
+            } else {
+                alert('Error Deleting');
+            }
+          },
+          error: function(error) {
+              // Handle error
+              console.error('Error:', error);
+
+              // Display an alert for the error
+              alert('Error Deleting');
+          }
+        }
+      )
+    }
 
   </script>
 

@@ -61,6 +61,13 @@ Products
           </div>
         </div>
       </div>
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div class="container">
+          <div id="items-container" class="row">
+
+          </div>
+        </div>
+      </main>
     </div>
 </div>
 
@@ -68,9 +75,58 @@ Products
 
 {% block script %}
 
+  <!-- Include jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script>
-    var drink_list = {{ drink_list|safe }};
-    console.log(drink_list);
-  </script>
+    function fetchMenu()
+    {
+      $.ajax(
+        {
+          url: "/get_menu",
+          type: "GET",
+          dataType: "json",
+          success: function (data) {
+            updateMenu(data.menu);
+          }
+        }
+      );
+    }
 
+    function updateMenu(menuJSON)
+    {
+      //Parse JSON string to get array of drinks
+      var menu = JSON.parse(menuJSON);
+      // Get item container element
+      var itemContainer = $('#items-container');
+
+      //Clear previous content
+      itemContainer.empty();
+
+      menu.forEach(function (drink)
+      {
+        var itemHtml =
+          '<div class="col-12 col-md-6 col-lg-3 mb-3 mt-3">'+
+            '<div class="card" style="width: 18rem;">'+
+              '<img class="card-img-top" src="' + drink.img_src + '" alt="Card image cap">'+
+              '<div class="card-body">'+
+                '<h5 class="card-title text-center">' + drink.name + '</h5>'+
+                '<p class="card-text text-center">' + drink.price.toLocaleString('en-US')+ '₫' + '</p>'+
+              '</div>'+
+            '</div>'+
+          '</div>';
+
+          // Append item HTML to the container
+          itemContainer.append(itemHtml);
+      }
+      );
+    }
+
+    // Start fetching
+    $(document).ready(function () {
+      fetchMenu();
+    }
+    );
+
+  </script>
+  
 {% endblock %}

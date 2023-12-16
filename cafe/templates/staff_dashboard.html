@@ -160,6 +160,7 @@ Staff Dashboard
         success: function (response) {
           // Handle success response
           console.log('PATCH request successful', response);
+          fetchGuestOrders();
         },
         error: function (error) {
           // Handle error

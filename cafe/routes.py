@@ -51,7 +51,6 @@ def login():
 @app.route("/staff/dashboard", methods=['GET', 'PATCH'])
 def display_staff_dashboard():
     if request.method == "GET":
-        guest_orders = json_util.dumps(list(orders.find({'status': 'New'})))
         return render_template('staff_dashboard.html')
 
     if request.method == "PATCH":
@@ -64,16 +63,12 @@ def display_staff_dashboard():
 
 @app.route("/staff/finished-orders")
 def display_finished_orders():
-    finished_orders = json_util.dumps(list(orders.find({'status': 'Done'})))
-    return render_template('staff_finished_orders.html',
-                           finished_orders=finished_orders)
+    return render_template('staff_finished_orders.html')
 
 
 @app.route("/staff/products")
 def display_staff_products():
-    drink_list = list(menu.find())
-    return render_template('staff_products.html',
-                           drink_list=json_util.dumps(drink_list))
+    return render_template('staff_products.html')
 
 
 @app.route("/admin/dashboard", methods=['GET', 'POST'])
@@ -120,7 +115,7 @@ def display_admin_products():
         drink_id = ObjectId(drink_request['_id'])
         new_price = drink_request['new_price']
         menu.update_one({'_id': drink_id},
-                        {'$set': {'price': new_price}})
+                        {'$set': {'price': int(new_price)}})
         return jsonify({'status': 'success', 'message': 'Successfully updated price'}), 200
 
     if request.method == "DELETE":
@@ -145,6 +140,12 @@ def get_orders_data():
     """
     new_orders = json_util.dumps(list(orders.find({'status': 'New'})))
     return jsonify(guest_orders=new_orders)
+
+
+@app.route('/get_finished_orders')
+def get_finished_orders():
+    finished_orders = json_util.dumps(list(orders.find({'status': 'Done'})))
+    return jsonify(finished_orders=finished_orders)
 
 
 @app.route('/get_admin_data')
