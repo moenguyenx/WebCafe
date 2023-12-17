@@ -16,7 +16,7 @@ def order(table_num):
                                drink_list=json_util.dumps(drink_list))
 
     if request.method == "POST":
-        data = request.get_json()
+        data = request.json
         # Calculate total of bill, handle exception could happen in frontend
         total_bill = 0
         for drink in data['order']:
