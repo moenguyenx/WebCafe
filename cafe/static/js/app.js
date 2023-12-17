@@ -46,7 +46,7 @@ function addToCard(key)
         // copy product form list to list card
         listCards[key] = JSON.parse(JSON.stringify(drink_list[key]));
         listCards[key].quantity = 1;
-    }
+    } 
     reloadCard();
 }
 
@@ -95,5 +95,48 @@ function changeQuantity(key, quantity)
         listCards[key].price = total;
     }
     reloadCard();
-    return total;
+}
+
+function submitOrder() {
+    const orderData = {
+        order: []
+    };
+
+    listCards.forEach((value, key) => {
+        if (value != null) {
+            orderData.order.push({
+                _id: value._id.$oid,
+                name: value.name,
+                quantity: value.quantity,
+                note: value.note || "" // Use an empty string if note is undefined
+            });
+        }
+    });
+
+    // Call the function to send the POST request
+    sendPostRequest(orderData);
+}
+
+function sendPostRequest(orderData) {
+    fetch(window.location.href, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(orderData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Handle the response from the server (if needed)
+        console.log('Server response:', data);
+        // You can perform any additional actions based on the server response
+        // For example, clear the shopping cart after a successful order
+        listCards = [];
+        reloadCard();
+        body.classList.remove('active');
+    })
+    .catch(error => {
+        console.error('Error sending POST request:', error);
+        // Handle the error (e.g., show an alert to the user)
+    });
 }
