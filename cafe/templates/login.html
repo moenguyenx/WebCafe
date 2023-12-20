@@ -8,7 +8,7 @@
     <meta name="author" content="Moenguyenx, HaiAnh, NghiaTran, VuTuLan">
     <meta name="generator" content="Hugo 0.118.2">
     <title>Signin</title>
-
+    <link href="/static/image/favicon.ico" rel="icon" type="image/x-icon">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
 
     
@@ -151,33 +151,37 @@
         </li>
       </ul>
     </div>
-
     
-<main class="form-signin w-100 m-auto">
-  <form method="post" action="{{ url_for('login') }}">
-    <img class="mb-4" src="/static/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    <main class="form-signin w-100 m-auto">
+        {% with messages = get_flashed_messages() %}
+            {% for message in messages %}
+            <div class="alert alert-danger" role="alert">{{ message }}</div>
+            {% endfor %}
+        {% endwith %}
+  
+      <form method="post" action="{{ url_for('login') }}">
+        <img class="mb-4" src="/static/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
-    <div class="form-floating">
-      <input type="text" class="form-control" id="floatingInput" placeholder="name" name="username">
-      <label for="floatingInput">Username</label>
-    </div>
-    <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
-      <label for="floatingPassword">Password</label>
-    </div>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="username" placeholder="name" name="username">
+          <label for="floatingInput">Username</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+          <label for="floatingPassword">Password</label>
+        </div>
 
-    <div class="form-check text-start my-3">
-      <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-      <label class="form-check-label" for="flexCheckDefault">
-        Remember me
-      </label>
-    </div>
-    <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
-    <p class="mt-5 mb-3 text-body-secondary">&copy; Entrepreneur 2023</p>
-  </form>
-</main>
-<script src="/static/js/login.js"></script>
-
+        <div class="form-check text-start my-3">
+          <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Remember me
+          </label>
+        </div>
+        <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+        <p class="mt-5 mb-3 text-body-secondary">&copy; Entrepreneur 2023</p>
+      </form>
+    </main>
+    <script src="/static/js/login.js"></script>
     </body>
 </html>

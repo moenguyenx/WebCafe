@@ -61,6 +61,13 @@ Staff Dashboard
           </div>
         </div>
       </div>
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div class="container">
+          <div id="orders-container" class="row">
+
+          </div>
+        </div>
+      </main>
     </div>
 </div>
 
@@ -69,9 +76,98 @@ Staff Dashboard
 
 {% block script %}
 
+  <!-- Include jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
   <script>
-    var order_list = {{ guest_orders|safe }}
-    console.log(order_list)
+    function fetchGuestOrders() 
+    {
+      $.ajax(
+        {
+        url: "/get_orders_data",
+        type: "GET",
+        dataType: "json",
+        success: function (data) {
+          // Update the guest orders on the page
+          updateGuestOrders(data.guest_orders);
+        },
+        complete: function () {
+          // Schedule the next fetch after 5 seconds
+          setTimeout(fetchGuestOrders, 5000);
+        }
+        });
+    }
+
+    function updateGuestOrders(guestOrdersJSON) {
+      // Parse the JSON string to get an array of guest orders
+      var guestOrders = JSON.parse(guestOrdersJSON);
+
+      // Get the orders container element
+      var ordersContainer = $('#orders-container');
+
+      // Clear previous content
+      ordersContainer.empty();
+
+      // Iterate over each guest order
+      guestOrders.forEach(function (order) {
+        var orderId = order._id.$oid;
+
+        // Create an HTML string for each order
+        var orderHtml =
+          '<div class="col-12 col-md-6 col-lg-3 mb-3 mt-3">' +
+          '  <div class="card">' +
+          '    <div class="card-header">' +
+          '      Table: ' + order.table +
+          '    </div>';
+
+        // Iterate over each item in the order
+        order.order.forEach(function (item) {
+          orderHtml +=
+            '    <div class="card-body border">' +
+            '      <div class="d-flex justify-content-between">' +
+            '        <h4 class="card-title">' + item.name + '</h4>' +
+            '        <p class="card-text">Quantity: ' + item.quantity + '</p>' +
+            '      </div>' +
+            '      <p class="card-text">Note: ' + item.note + '</p>' +
+            '    </div>';
+        });
+
+        // Add the order footer with the button
+        orderHtml +=
+          '    <div class="card-footer bg-auto">' +
+          '      <button class="btn btn-primary btn-block" onclick="sendPatchRequest(\'' + orderId + '\')">Finish</button>' +
+          '    </div>' +
+          '  </div>' +
+          '</div>';
+
+        // Append the order HTML to the container
+        ordersContainer.append(orderHtml);
+      });
+    }
+
+    // Start fetching guest orders when the page is loaded
+    $(document).ready(function () {
+      fetchGuestOrders();
+    });
+
+    // Function to send PATCH request
+    function sendPatchRequest(orderId) {
+      $.ajax({
+        url: '/staff/dashboard',
+        type: 'PATCH',
+        contentType: 'application/json',
+        data: JSON.stringify({ "_id": orderId }),
+        success: function (response) {
+          // Handle success response
+          console.log('PATCH request successful', response);
+          fetchGuestOrders();
+        },
+        error: function (error) {
+          // Handle error
+          console.error('Error in PATCH request', error);
+        }
+      });
+    }
   </script>
 
 {% endblock %}
