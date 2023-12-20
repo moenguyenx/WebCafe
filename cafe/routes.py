@@ -83,7 +83,7 @@ def display_staff_dashboard():
         done_order_id = ObjectId(request_id)
         orders.update_one({"_id": done_order_id},
                           {"$set": {"status": "Done"}})
-        return jsonify({"message": "Successfully updated the database"})
+        return jsonify({"message": "Successfully updated the database", "status": "success"}), 200
 
 
 #################################################################################
