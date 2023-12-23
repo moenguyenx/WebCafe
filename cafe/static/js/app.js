@@ -116,10 +116,19 @@ function submitOrder() {
             });
         }
     });
+
+    // Calculate total quantity
+    const totalQuantity = listCards.reduce((total, item) => total + (item ? item.quantity : 0), 0);
+
+    if (totalQuantity === 0) {
+        alert("Your shopping cart is empty. Please add items before submitting.");
+        return; // Stop further execution if total quantity is 0
+    }
+
     // Call the function to send the POST request
     sendPostRequest(orderData);
-    
 }
+
 
 function sendPostRequest(orderData) {
     fetch(window.location.href, {
