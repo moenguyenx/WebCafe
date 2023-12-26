@@ -219,3 +219,26 @@ header .shopping span {
     outline: none;
     font-size: medium;
 }
+
+/* Media Queries for Tablet and Desktop */
+@media (min-width: 768px) {
+    .card {
+        max-width: 500px;
+    }
+
+    .active .card {
+        left: calc(100% - 500px);
+    }
+
+    .active .container {
+        transform: translateX(-100px);
+    }
+
+    .card .checkOut div {
+        margin-bottom: 0;
+    }
+
+    .listCard li {
+        grid-template-columns: 100px repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
