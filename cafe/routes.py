@@ -1,5 +1,9 @@
+import dbm
 import json
-from cafe import app, menu, orders, users, finance, bcrypt
+import pandas as pd
+from flask import render_template
+from flask_bootstrap import Bootstrap
+from cafe import app, menu, orders, users, finance,drinks, bcrypt
 from flask import render_template, request, redirect, url_for, jsonify, flash
 from cafe.get_time import get_date, get_current_time
 from cafe.query import *
@@ -162,7 +166,29 @@ def display_admin_products():
 #################################################################################
 @app.route("/admin/reports")
 def display_admin_reports():
-    return render_template('admin_reports.html')
+    pipeline = [
+    {'$unwind': '$order'},  # Chuyển mỗi phần tử trong mảng order thành một tài liệu mới
+    {'$group': {'_id': '$order.name', 'total_quantity': {'$sum': '$order.quantity'}}},
+    {'$project': { 'name': '$_id', 'total_quantity': 1}}
+    ]
+   
+    result = list(orders.aggregate(pipeline))
+
+    # Đưa kết quả vào collection drink
+    for item in result:
+        drink_name = item['name']
+        total_quantity = item['total_quantity']
+        drinks.update_one({'Drinkname': drink_name}, {'$set': {'Drinkname': drink_name, 'Quantity': total_quantity}}, upsert=True)
+    cursor = drinks.find().sort('Quantity', -1)
+    drinks_data = list(cursor)
+
+    # Chuyển đổi dữ liệu thành DataFrame Pandas
+    df = pd.DataFrame(drinks_data)
+    df = df.loc[:, ~df.columns.str.endswith('id')]
+    # Tạo một bảng đẹp với Pandas và Bootstrap
+    table_html = df.to_html(classes='table table-striped table-bordered')
+
+    return render_template('admin_reports.html',table=table_html)
 
 
 #################################################################################

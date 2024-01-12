@@ -5,7 +5,6 @@ Admin Reports
 {% endblock %}
 
 {% block container %}
-
 <div class="container-fluid">
     <div class="row">
       <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary">
@@ -61,6 +60,41 @@ Admin Reports
           </div>
         </div>
       </div>
+      <div class = "table" >
+        <h1>Reports</h1>
+        <h3>Top Drinks</h3>
+        {{ table|safe }}</div>
     </div>
 </div>
+<style>
+  .container-fluid .row {
+    justify-content: flex-end;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  
+  .container-fluid .row .table {
+    border-top: 50px;
+    font-size: large;
+    text-align: center;
+    width: 1540px;
+  }
+  .container-fluid .row .table h1{
+    text-align: left;
+  }
+  .container-fluid .row .table h3{
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .container-fluid .row .table table th{
+    text-align: center;
+  }
+</style>
 {% endblock %}
