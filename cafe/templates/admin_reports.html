@@ -81,26 +81,6 @@ Admin Reports
       </main>
     </div>
 </div>
-
-<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">Reports</h1>
-    <div class="btn-toolbar mb-2 mb-md-0">
-      <div class="btn-group me-2">
-        <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-        <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-      </div>
-      <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle d-flex align-items-center gap-1">
-        <svg class="bi"><use xlink:href="#calendar3"/></svg>
-        This week
-      </button>
-    </div>
-  </div>
-
-  <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
-  
-  
-</main>
 </div>
 </div>
 
@@ -118,40 +98,40 @@ Admin Reports
     <script>
       var myChart; // Declare myChart as a global variable
 
-// Function to create the initial Chart.js chart
-function createChart() {
-    const ctx = document.getElementById('myChart').getContext('2d');
-    myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: drink_name,
-            datasets: [{
-                data: drink_quantity,
-                backgroundColor: 'rgba(54, 162, 235, 0.75)',
-                borderColor: 'rgba(54, 162, 235, 1.5)',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    position: 'top',
-                    display: false
-                },
-                title: {
-                    display: true,
-                    text: 'Ranking Drink chart'
-                },
-                tooltip: {
-                    boxPadding: 3
-                }
-            }
-        }
-    });
-}
+      // Function to create the initial Chart.js chart
+      function createChart() {
+          const ctx = document.getElementById('myChart').getContext('2d');
+          myChart = new Chart(ctx, {
+              type: 'line',
+              data: {
+                  labels: drink_name,
+                  datasets: [{
+                      data: drink_quantity,
+                      backgroundColor: 'rgba(54, 162, 235, 0.75)',
+                      borderColor: 'rgba(54, 162, 235, 1.5)',
+                      borderWidth: 5
+                  }]
+              },
+              options: {
+                  responsive: true,
+                  plugins: {
+                      legend: {
+                          position: 'top',
+                          display: false
+                      },
+                      title: {
+                          display: true,
+                          text: 'Ranking Drink chart'
+                      },
+                      tooltip: {
+                          boxPadding: 3
+                      }
+                  }
+              }
+          });
+      }
 
-createChart();
+      createChart();
 
     </script>
 
