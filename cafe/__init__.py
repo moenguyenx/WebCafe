@@ -17,7 +17,8 @@ menu = mongo.db.menu
 orders = mongo.db.orders
 users = mongo.db.users
 finance = mongo.db.finance
-drinks= mongo.db.drinks
+drinks = mongo.db.drinks
+
 from cafe import routes
 
 
