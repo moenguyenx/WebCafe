@@ -70,6 +70,7 @@ def update_revenue(new_bill):
     current_revenue += new_bill
     finance.update_one({"date": get_date()},
                        {"$set": {"revenue": current_revenue}})
+                       
 
 
 def get_quantity_list():
