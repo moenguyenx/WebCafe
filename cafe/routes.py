@@ -1,5 +1,5 @@
 import json
-from cafe import app, menu, orders, users, finance, bcrypt
+from cafe import app, menu, orders, users, finance, drinks, bcrypt
 from flask import render_template, request, redirect, url_for, jsonify, flash
 from cafe.get_time import get_date, get_current_time
 from cafe.query import *
@@ -158,11 +158,17 @@ def display_admin_products():
 
 
 #################################################################################
-# Unfinished function :)))))
+# Display Admin reports
 #################################################################################
 @app.route("/admin/reports")
 def display_admin_reports():
-    return render_template('admin_reports.html')
+    drinks_list = drinks.find().sort({'quantity': -1})
+    drink_name = [item['name'] for item in drinks_list]
+    drink_quantity = get_quantity_list()
+
+    return render_template('admin_reports.html', 
+                           drink_name=json.dumps(drink_name), 
+                           drink_quantity=json.dumps(drink_quantity))
 
 
 #################################################################################
@@ -197,6 +203,7 @@ def get_admin_data():
                    today_revenue="{:,.0f}".format(today_revenue),
                    labels=json.dumps(get_day_list()),
                    data=json.dumps(get_daily_revenue_list()))
+
 
 
 @app.route('/get_menu')

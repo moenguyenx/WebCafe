@@ -1,4 +1,4 @@
-from cafe import users, menu, orders, finance
+from cafe import users, menu, orders, finance, drinks
 from cafe.get_time import get_date
 from bson import ObjectId
 
@@ -71,4 +71,10 @@ def update_revenue(new_bill):
     finance.update_one({"date": get_date()},
                        {"$set": {"revenue": current_revenue}})
 
+
+def get_quantity_list():
+    """
+    :return: Daily revenue in Finance collection to display on admin dashboard
+    """
+    return [item['quantity'] for item in drinks.find().sort({'quantity': -1})]
 
