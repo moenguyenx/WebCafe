@@ -162,6 +162,27 @@ def display_admin_products():
 #################################################################################
 @app.route("/admin/reports")
 def display_admin_reports():
+    #aggregate pipeline querry
+    pipeline = [
+        # Converts each element in the order array into a new document
+    {'$unwind': '$order'},
+        #group by the 'name' and then calculate the total quantity   
+    {'$group': {'_id': '$order.name', 'quantity': {'$sum': '$order.quantity'}}},
+        #show 'name' and 'quantity' 
+    {'$project': {'_id': 0, 'name': '$_id', 'quantity': 1}}
+    ]
+        #Returns the results as a list
+    result = list(orders.aggregate(pipeline))
+
+        # put the resulut in collection drinks
+    for item in result:
+        current_name = item['name']
+        current_quantity = item['quantity']
+    
+        # Update collection drinks
+        drinks.update_one({'name': current_name}, {'$set': {'name': current_name, 'quantity': current_quantity}}, upsert=True)
+        
+
     drinks_list = drinks.find().sort({'quantity': -1})
     drink_name = [item['name'] for item in drinks_list]
     drink_quantity = get_quantity_list()
