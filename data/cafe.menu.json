@@ -1,0 +1,96 @@
+[{
+  "_id": {
+    "$oid": "657919b4e4fb7c8534cc9bab"
+  },
+  "name": "Vietnamese Black Coffee",
+  "price": 30000,
+  "img_src": "https://entrepreneur-cafe-bucket.s3.ap-southeast-1.amazonaws.com/4.png"
+},
+{
+  "_id": {
+    "$oid": "657919b4e4fb7c8534cc9ba9"
+  },
+  "name": "Cappucino",
+  "price": 55000,
+  "img_src": "https://entrepreneur-cafe-bucket.s3.ap-southeast-1.amazonaws.com/2.png"
+},
+{
+  "_id": {
+    "$oid": "657919b4e4fb7c8534cc9bad"
+  },
+  "name": "Black Tea",
+  "price": 32000,
+  "img_src": "https://entrepreneur-cafe-bucket.s3.ap-southeast-1.amazonaws.com/6.png"
+},
+{
+  "_id": {
+    "$oid": "657919b4e4fb7c8534cc9baf"
+  },
+  "name": "Chocolate Milkshake",
+  "price": 55000,
+  "img_src": "https://entrepreneur-cafe-bucket.s3.ap-southeast-1.amazonaws.com/8.png"
+},
+{
+  "_id": {
+    "$oid": "657919b4e4fb7c8534cc9bb0"
+  },
+  "name": "Boba Milktea",
+  "price": 45000,
+  "img_src": "https://entrepreneur-cafe-bucket.s3.ap-southeast-1.amazonaws.com/9.png"
+},
+{
+  "_id": {
+    "$oid": "657919b4e4fb7c8534cc9bac"
+  },
+  "name": "Vietnamese Milk Coffee",
+  "price": 35000,
+  "img_src": "https://entrepreneur-cafe-bucket.s3.ap-southeast-1.amazonaws.com/5.png"
+},
+{
+  "_id": {
+    "$oid": "657919b4e4fb7c8534cc9bae"
+  },
+  "name": "Matcha Latte",
+  "price": 45000,
+  "img_src": "https://entrepreneur-cafe-bucket.s3.ap-southeast-1.amazonaws.com/7.png"
+},
+{
+  "_id": {
+    "$oid": "657db0b516897c7e06b87e53"
+  },
+  "name": "Latte",
+  "price": 55000,
+  "img_src": "https://entrepreneur-cafe-bucket.s3.ap-southeast-1.amazonaws.com/1.png"
+},
+{
+  "_id": {
+    "$oid": "65805c9402f3e0db3e2dc367"
+  },
+  "name": "English Breakfast Tea",
+  "price": 40000,
+  "img_src": "https://entrepreneur-cafe-bucket.s3.ap-southeast-1.amazonaws.com/english-breakfast-tea.jpg"
+},
+{
+  "_id": {
+    "$oid": "65805cb602f3e0db3e2dc368"
+  },
+  "name": "Vietnamese Egg Coffee",
+  "price": 45000,
+  "img_src": "https://entrepreneur-cafe-bucket.s3.ap-southeast-1.amazonaws.com/Vietnamese-Egg-Coffee.jpg"
+},
+{
+  "_id": {
+    "$oid": "65805ce202f3e0db3e2dc369"
+  },
+  "name": "Espresso",
+  "price": 40000,
+  "img_src": "https://entrepreneur-cafe-bucket.s3.ap-southeast-1.amazonaws.com/espresso.png"
+},
+{
+  "_id": {
+    "$oid": "6582472bafbc36795113fe2e"
+  },
+  "name": "Americano",
+  "price": 40000,
+  "img_src": "https://entrepreneur-cafe-bucket.s3.ap-southeast-1.amazonaws.com/3.png"
+}]

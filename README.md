@@ -22,8 +22,9 @@
 # 4. How to use?
    * Prerequisites:
      - Your MongoDB should have 'cafe' database and 4 collection name 'users, finance, menu, orders'
-       ![image](https://github.com/moenguyenx/WebCafe/assets/130982716/75b21799-b69e-41bb-b608-4b89839c8a41)
-     - Remember to add your own MongoDB URI in __init__.py
+       ![image](https://github.com/moenguyenx/WebCafe/assets/130982716/75b21799-b69e-41bb-b608-4b89839c8a41).
+     - Remember to add your own MongoDB URI in __init__.py.
+     - The JSON Data for database is placed in "data" folder.
 
    - Fork this project
    - Create venv and install required libraries

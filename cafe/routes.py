@@ -196,11 +196,11 @@ def display_admin_reports():
 # API return specific data in JSON
 #################################################################################
 @app.route('/get_orders_data')
-def get_orders_data():
+async def get_orders_data():
     """
     :return: New orders
     """
-    new_orders = json_util.dumps(list(orders.find({'status': 'New'})))
+    new_orders = await json_util.dumps(list(orders.find({'status': 'New'})))
     return jsonify(guest_orders=new_orders)
 
 
