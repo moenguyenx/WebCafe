@@ -21,8 +21,8 @@
   
 # 4. How to use?
    * Prerequisites:
-     - Your MongoDB should have 'cafe' database and 4 collection name 'users, finance, menu, orders'
-       ![image](https://github.com/moenguyenx/WebCafe/assets/130982716/75b21799-b69e-41bb-b608-4b89839c8a41).
+     - Your MongoDB should have 'cafe' database and 5 collection name 'users, finance, menu, orders, drinks'
+       ![image](https://github.com/moenguyenx/WebCafe/assets/130982716/ba072d0d-8428-4aa1-87b5-0ee22334c8fb)
      - Remember to add your own MongoDB URI in __init__.py.
      - The JSON Data for database is placed in "data" folder.
 
