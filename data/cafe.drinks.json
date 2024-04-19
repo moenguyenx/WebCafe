@@ -1,0 +1,84 @@
+[{
+  "_id": {
+    "$oid": "65a39b7cf00b5cd9d7dd8f1b"
+  },
+  "name": "Cappucino",
+  "quantity": 123
+},
+{
+  "_id": {
+    "$oid": "65a39b8cf00b5cd9d7dd8f1d"
+  },
+  "name": "Latte",
+  "quantity": 30
+},
+{
+  "_id": {
+    "$oid": "65a39bd1f00b5cd9d7dd8f27"
+  },
+  "name": "Black Tea",
+  "quantity": 53
+},
+{
+  "_id": {
+    "$oid": "65a39beef00b5cd9d7dd8f2b"
+  },
+  "name": "Boba Milktea",
+  "quantity": 36
+},
+{
+  "_id": {
+    "$oid": "65a39c1cf00b5cd9d7dd8f2f"
+  },
+  "name": "Matcha Latte",
+  "quantity": 32
+},
+{
+  "_id": {
+    "$oid": "65a39c34f00b5cd9d7dd8f31"
+  },
+  "name": "Americano",
+  "quantity": 18
+},
+{
+  "_id": {
+    "$oid": "65a39c4ff00b5cd9d7dd8f33"
+  },
+  "name": "Espresso",
+  "quantity": 16
+},
+{
+  "_id": {
+    "$oid": "65a3a48cf00b5cd9d7dd8f37"
+  },
+  "name": "Vietnamese Black Coffee",
+  "quantity": 83
+},
+{
+  "_id": {
+    "$oid": "65a3a4bbf00b5cd9d7dd8f3b"
+  },
+  "name": "Chocolate Milkshake",
+  "quantity": 33
+},
+{
+  "_id": {
+    "$oid": "65a3a50ff00b5cd9d7dd8f45"
+  },
+  "name": "Vietnamese Milk Coffee",
+  "quantity": 39
+},
+{
+  "_id": {
+    "$oid": "65a3a53bf00b5cd9d7dd8f49"
+  },
+  "name": "Vietnamese Egg Coffee",
+  "quantity": 11
+},
+{
+  "_id": {
+    "$oid": "65a3a55ef00b5cd9d7dd8f4d"
+  },
+  "name": "English Breakfast Tea",
+  "quantity": 15
+}]

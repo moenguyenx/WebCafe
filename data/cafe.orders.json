@@ -1,0 +1,2207 @@
+[{
+  "_id": {
+    "$oid": "657b4269d1524e6d597995f2"
+  },
+  "date": "15-12-2023",
+  "table": 10,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 2,
+      "note": "less milk"
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bb0",
+      "name": "Boba Milktea",
+      "quantity": 5,
+      "note": "less ice"
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9ba8",
+      "name": "Latte",
+      "quantity": 2,
+      "note": "less ice"
+    }
+  ],
+  "total": 354000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "657b4335d1524e6d597995f3"
+  },
+  "date": "15-12-2023",
+  "table": 12,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 2,
+      "note": "less milk"
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bb0",
+      "name": "Boba Milktea",
+      "quantity": 5,
+      "note": "less ice"
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9ba8",
+      "name": "Latte",
+      "quantity": 2,
+      "note": "less ice"
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bac",
+      "name": "Vietnamese Milk Coffee",
+      "quantity": 2,
+      "note": "more milk"
+    }
+  ],
+  "total": 424000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "657ec97eddd72b4b7122d938"
+  },
+  "date": "17-12-2023",
+  "table": 10,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 2,
+      "note": "less milk"
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bb0",
+      "name": "Boba Milktea",
+      "quantity": 5,
+      "note": "less ice"
+    },
+    {
+      "_id": "657db0b516897c7e06b87e53",
+      "name": "Latte",
+      "quantity": 2,
+      "note": "less ice"
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bac",
+      "name": "Vietnamese Milk Coffee",
+      "quantity": 2,
+      "note": "more milk"
+    }
+  ],
+  "total": 465000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "657eca08ddd72b4b7122d939"
+  },
+  "date": "17-12-2023",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 1,
+      "note": "less milk"
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bb0",
+      "name": "Boba Milktea",
+      "quantity": 2,
+      "note": "less ice"
+    },
+    {
+      "_id": "657db0b516897c7e06b87e53",
+      "name": "Latte",
+      "quantity": 1,
+      "note": "less ice"
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bac",
+      "name": "Vietnamese Milk Coffee",
+      "quantity": 2,
+      "note": "more milk"
+    }
+  ],
+  "total": 250000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "657ed20be7bdbe64cd567094"
+  },
+  "date": "17-12-2023",
+  "table": 4,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 2,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9baa",
+      "name": "Americano",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bac",
+      "name": "Vietnamese Milk Coffee",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 215000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "657f167074ce989014516358"
+  },
+  "date": "17-12-2023",
+  "table": 5,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9baa",
+      "name": "Americano",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bac",
+      "name": "Vietnamese Milk Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 195000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "657f17a074ce989014516359"
+  },
+  "date": "17-12-2023",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bac",
+      "name": "Vietnamese Milk Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9baf",
+      "name": "Chocolate Milkshake",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bb0",
+      "name": "Boba Milktea",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 210000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "657f183a74ce98901451635a"
+  },
+  "date": "17-12-2023",
+  "table": 3,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 2,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bac",
+      "name": "Vietnamese Milk Coffee",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 175000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "657f18cbe02ac2c2995cd419"
+  },
+  "date": "17-12-2023",
+  "table": 3,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 2,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 3,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bac",
+      "name": "Vietnamese Milk Coffee",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 235000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "657f1919e02ac2c2995cd41a"
+  },
+  "date": "17-12-2023",
+  "table": 11,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 30000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "657f1978e02ac2c2995cd41b"
+  },
+  "date": "17-12-2023",
+  "table": 3,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 35000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "657f1de48a7d5b63f7ee1caa"
+  },
+  "date": "17-12-2023",
+  "table": 3,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": "iced, no sugar"
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 1,
+      "note": "iced"
+    }
+  ],
+  "total": 65000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "657f1e828a7d5b63f7ee1cab"
+  },
+  "date": "17-12-2023",
+  "table": 3,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bae",
+      "name": "Matcha Latte",
+      "quantity": 1,
+      "note": "no ice"
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bb0",
+      "name": "Boba Milktea",
+      "quantity": 1,
+      "note": "mỏe sugar"
+    }
+  ],
+  "total": 80000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "657f1e958a7d5b63f7ee1cac"
+  },
+  "date": "17-12-2023",
+  "table": 3,
+  "order": [
+    {
+      "_id": "657db0b516897c7e06b87e53",
+      "name": "Latte",
+      "quantity": 1,
+      "note": "cold"
+    }
+  ],
+  "total": 55000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65805e5002f3e0db3e2dc36a"
+  },
+  "date": "18-12-2023",
+  "table": 5,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": "iced, no sugar"
+    },
+    {
+      "_id": "65805c9402f3e0db3e2dc367",
+      "name": "English Breakfast Tea",
+      "quantity": 1,
+      "note": "with honey"
+    },
+    {
+      "_id": "65805ce202f3e0db3e2dc369",
+      "name": "Espresso",
+      "quantity": 1,
+      "note": "double shot"
+    }
+  ],
+  "total": 110000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65805f1a02f3e0db3e2dc36b"
+  },
+  "date": "18-12-2023",
+  "table": 5,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bac",
+      "name": "Vietnamese Milk Coffee",
+      "quantity": 1,
+      "note": "extra milk"
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 1,
+      "note": "no sugar"
+    },
+    {
+      "_id": "657db0b516897c7e06b87e53",
+      "name": "Latte",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "65805cb602f3e0db3e2dc368",
+      "name": "Vietnamese Egg Coffee",
+      "quantity": 1,
+      "note": "hot"
+    }
+  ],
+  "total": 165000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "658135e9e885c40096e640a6"
+  },
+  "date": "19-12-2023",
+  "table": 5,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 1,
+      "note": "thêm sữa"
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9baa",
+      "name": "Americano",
+      "quantity": 1,
+      "note": "đá"
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": "đá không đường"
+    }
+  ],
+  "total": 120000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65825bab42b7339bebdd640a"
+  },
+  "date": "20-12-2023",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bac",
+      "name": "Vietnamese Milk Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 1,
+      "note": "nfufhds"
+    }
+  ],
+  "total": 95000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65825f3242b7339bebdd640b"
+  },
+  "date": "20-12-2023",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 30000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "658260175ccbdd6bac2b1733"
+  },
+  "date": "20-12-2023",
+  "table": 5,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 1,
+      "note": "hot"
+    },
+    {
+      "_id": "65805c9402f3e0db3e2dc367",
+      "name": "English Breakfast Tea",
+      "quantity": 1,
+      "note": "with honey"
+    },
+    {
+      "_id": "65805cb602f3e0db3e2dc368",
+      "name": "Vietnamese Egg Coffee",
+      "quantity": 2,
+      "note": "hot"
+    }
+  ],
+  "total": 180000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65826ee5bb7710fb8b2e337c"
+  },
+  "date": "20-12-2023",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "65805cb602f3e0db3e2dc368",
+      "name": "Vietnamese Egg Coffee",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 125000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65826f9430c2b886bcaea316"
+  },
+  "date": "20-12-2023",
+  "table": 1,
+  "order": [],
+  "total": 0,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "6582d9ece1ece2d050bfe242"
+  },
+  "date": "20-12-2023",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bac",
+      "name": "Vietnamese Milk Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bae",
+      "name": "Matcha Latte",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9baf",
+      "name": "Chocolate Milkshake",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bb0",
+      "name": "Boba Milktea",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657db0b516897c7e06b87e53",
+      "name": "Latte",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "65805c9402f3e0db3e2dc367",
+      "name": "English Breakfast Tea",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "65805cb602f3e0db3e2dc368",
+      "name": "Vietnamese Egg Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "65805ce202f3e0db3e2dc369",
+      "name": "Espresso",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "6582472bafbc36795113fe2e",
+      "name": "Americano",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 510000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "6582da33e1ece2d050bfe243"
+  },
+  "date": "20-12-2023",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bac",
+      "name": "Vietnamese Milk Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bae",
+      "name": "Matcha Latte",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657db0b516897c7e06b87e53",
+      "name": "Latte",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "6582472bafbc36795113fe2e",
+      "name": "Americano",
+      "quantity": 1,
+      "note": "507 iced"
+    }
+  ],
+  "total": 285000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65843020691168c135be63b0"
+  },
+  "date": "21-12-2023",
+  "table": 1,
+  "order": [],
+  "total": 0,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "658430a6691168c135be63b1"
+  },
+  "date": "21-12-2023",
+  "table": 1,
+  "order": [],
+  "total": 0,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65850c5222320b7867115b44"
+  },
+  "date": "22-12-2023",
+  "table": 3,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 1,
+      "note": "iced"
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": "iced, no sugar"
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9baf",
+      "name": "Chocolate Milkshake",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 115000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "6586a04fd0f1aa7be4a8fdcb"
+  },
+  "date": "23-12-2023",
+  "table": 5,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 1,
+      "note": "iced"
+    }
+  ],
+  "total": 30000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "6586aa5a3a3988c462a58210"
+  },
+  "date": "23-12-2023",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 50000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "6586aa8e3a3988c462a58211"
+  },
+  "date": "23-12-2023",
+  "table": 4,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 1,
+      "note": "thêm đường, ..."
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 1,
+      "note": "cức"
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9baf",
+      "name": "Chocolate Milkshake",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 165000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "6586f1fb45a3e30162ebf7df"
+  },
+  "date": "23-12-2023",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 50000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "6586f20145a3e30162ebf7e0"
+  },
+  "date": "23-12-2023",
+  "table": 1,
+  "order": [],
+  "total": 0,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "6586f3ad45a3e30162ebf7e1"
+  },
+  "date": "23-12-2023",
+  "table": 1,
+  "order": [],
+  "total": 0,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "6586f47145a3e30162ebf7e2"
+  },
+  "date": "23-12-2023",
+  "table": 1,
+  "order": [],
+  "total": 0,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "6586f4b445a3e30162ebf7e3"
+  },
+  "date": "23-12-2023",
+  "table": 1,
+  "order": [],
+  "total": 0,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "6586f78a45a3e30162ebf7e4"
+  },
+  "date": "23-12-2023",
+  "table": 1,
+  "order": [],
+  "total": 0,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "6586f86845a3e30162ebf7e5"
+  },
+  "date": "23-12-2023",
+  "table": 1,
+  "order": [],
+  "total": 0,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "6586f92445a3e30162ebf7e6"
+  },
+  "date": "23-12-2023",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 80000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "6586f92c45a3e30162ebf7e7"
+  },
+  "date": "23-12-2023",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9baf",
+      "name": "Chocolate Milkshake",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 135000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "6586f9a745a3e30162ebf7e8"
+  },
+  "date": "23-12-2023",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 1,
+      "note": "như con cặc"
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9baf",
+      "name": "Chocolate Milkshake",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 135000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "6587d2298fd74e90da118ec2"
+  },
+  "date": "24-12-2023",
+  "table": 1,
+  "order": [],
+  "total": 0,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "658922c73f2ad35c27daf447"
+  },
+  "date": "25-12-2023",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 2,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 140000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "658922dc3f2ad35c27daf448"
+  },
+  "date": "25-12-2023",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 1,
+      "note": "scscsc"
+    }
+  ],
+  "total": 30000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "658a682c91fbc948ce844e06"
+  },
+  "date": "26-12-2023",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 1,
+      "note": "cường order"
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 2,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 160000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "658aba17bfaada6f77247a03"
+  },
+  "date": "26-12-2023",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 80000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "658abcd54777d3789a2d0a6f"
+  },
+  "date": "26-12-2023",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 2,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 110000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "658abd69486d772fe571945c"
+  },
+  "date": "26-12-2023",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 1,
+      "note": "thêm đường"
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 80000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "658ae4ab79f6f2d0de2d6b32"
+  },
+  "date": "26-12-2023",
+  "table": 5,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 30000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "658ae4f179f6f2d0de2d6b33"
+  },
+  "date": "26-12-2023",
+  "table": 5,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9baf",
+      "name": "Chocolate Milkshake",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bb0",
+      "name": "Boba Milktea",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bac",
+      "name": "Vietnamese Milk Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bae",
+      "name": "Matcha Latte",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 290000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "658b9fd47b9ffbe377f51ef4"
+  },
+  "date": "27-12-2023",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 3,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 2,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9baf",
+      "name": "Chocolate Milkshake",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 280000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65967553ec51a282102e9f9f"
+  },
+  "date": "04-01-2024",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9baf",
+      "name": "Chocolate Milkshake",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 140000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65967740ec51a282102e9fa0"
+  },
+  "date": "04-01-2024",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 2,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 2,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9baf",
+      "name": "Chocolate Milkshake",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bac",
+      "name": "Vietnamese Milk Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bae",
+      "name": "Matcha Latte",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657db0b516897c7e06b87e53",
+      "name": "Latte",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 394000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "659fb321f098cb7dd3cdc97c"
+  },
+  "date": "11-01-2024",
+  "table": 2,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 7,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 3,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 5,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9baf",
+      "name": "Chocolate Milkshake",
+      "quantity": 4,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bb0",
+      "name": "Boba Milktea",
+      "quantity": 2,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bac",
+      "name": "Vietnamese Milk Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bae",
+      "name": "Matcha Latte",
+      "quantity": 9,
+      "note": ""
+    }
+  ],
+  "total": 1289000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "659fc23c38ae6a8123024ad4"
+  },
+  "date": "11-01-2024",
+  "table": 2,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 2,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 3,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 4,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9baf",
+      "name": "Chocolate Milkshake",
+      "quantity": 5,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bb0",
+      "name": "Boba Milktea",
+      "quantity": 7,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bac",
+      "name": "Vietnamese Milk Coffee",
+      "quantity": 6,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bae",
+      "name": "Matcha Latte",
+      "quantity": 10,
+      "note": ""
+    },
+    {
+      "_id": "657db0b516897c7e06b87e53",
+      "name": "Latte",
+      "quantity": 4,
+      "note": ""
+    },
+    {
+      "_id": "65805c9402f3e0db3e2dc367",
+      "name": "English Breakfast Tea",
+      "quantity": 12,
+      "note": ""
+    },
+    {
+      "_id": "65805cb602f3e0db3e2dc368",
+      "name": "Vietnamese Egg Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "65805ce202f3e0db3e2dc369",
+      "name": "Espresso",
+      "quantity": 2,
+      "note": ""
+    },
+    {
+      "_id": "6582472bafbc36795113fe2e",
+      "name": "Americano",
+      "quantity": 3,
+      "note": ""
+    }
+  ],
+  "total": 2544000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "659fe3c9d553ff37536153a3"
+  },
+  "date": "11-01-2024",
+  "table": 2,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 4,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 3,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 2,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9baf",
+      "name": "Chocolate Milkshake",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bb0",
+      "name": "Boba Milktea",
+      "quantity": 6,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bac",
+      "name": "Vietnamese Milk Coffee",
+      "quantity": 5,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bae",
+      "name": "Matcha Latte",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657db0b516897c7e06b87e53",
+      "name": "Latte",
+      "quantity": 2,
+      "note": ""
+    }
+  ],
+  "total": 1008000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65a010f76c5dc6be4683a4b6"
+  },
+  "date": "11-01-2024",
+  "table": 2,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 5,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 15,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bac",
+      "name": "Vietnamese Milk Coffee",
+      "quantity": 10,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bae",
+      "name": "Matcha Latte",
+      "quantity": 5,
+      "note": ""
+    },
+    {
+      "_id": "657db0b516897c7e06b87e53",
+      "name": "Latte",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 1615000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65a01771221da965c7474427"
+  },
+  "date": "11-01-2024",
+  "table": 2,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 10,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 5,
+      "note": ""
+    }
+  ],
+  "total": 700000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65a1173a5f2fe8db0e0ff7d6"
+  },
+  "date": "12-01-2024",
+  "table": 4,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 7,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 5,
+      "note": ""
+    }
+  ],
+  "total": 535000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65a3a778b5728083f243adb1"
+  },
+  "date": "14-01-2024",
+  "table": 2,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 3,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 2,
+      "note": ""
+    },
+    {
+      "_id": "657db0b516897c7e06b87e53",
+      "name": "Latte",
+      "quantity": 2,
+      "note": ""
+    }
+  ],
+  "total": 316000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65a3b40ff8ba17799875c455"
+  },
+  "date": "14-01-2024",
+  "table": 2,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9baf",
+      "name": "Chocolate Milkshake",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 117000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65a3b4fff8ba17799875c456"
+  },
+  "date": "14-01-2024",
+  "table": 2,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9baf",
+      "name": "Chocolate Milkshake",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bae",
+      "name": "Matcha Latte",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 162000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65a3fb38f5b479214e2aa341"
+  },
+  "date": "14-01-2024",
+  "table": 3,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9baf",
+      "name": "Chocolate Milkshake",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bae",
+      "name": "Matcha Latte",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 132000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65a3fbf24cdd6bfadf2ea5b1"
+  },
+  "date": "14-01-2024",
+  "table": 3,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 55000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65a3fc15da2ada5fc7fb441c"
+  },
+  "date": "14-01-2024",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9baf",
+      "name": "Chocolate Milkshake",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 172000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65a3fc47045fc0c832c77bda"
+  },
+  "date": "14-01-2024",
+  "table": 2,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 10,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 10,
+      "note": ""
+    }
+  ],
+  "total": 850000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65a3fca74cdd6bfadf2ea5b2"
+  },
+  "date": "14-01-2024",
+  "table": 3,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 32000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65a3fcc7045fc0c832c77bdb"
+  },
+  "date": "14-01-2024",
+  "table": 2,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 2,
+      "note": ""
+    }
+  ],
+  "total": 110000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65a3fcea4cdd6bfadf2ea5b3"
+  },
+  "date": "14-01-2024",
+  "table": 3,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9baf",
+      "name": "Chocolate Milkshake",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 55000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65a3fd4fda2ada5fc7fb441d"
+  },
+  "date": "14-01-2024",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9baf",
+      "name": "Chocolate Milkshake",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 172000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65a3fde5045fc0c832c77bdc"
+  },
+  "date": "14-01-2024",
+  "table": 2,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 2,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 2,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9baf",
+      "name": "Chocolate Milkshake",
+      "quantity": 2,
+      "note": ""
+    }
+  ],
+  "total": 314000,
+  "status": "New"
+},
+{
+  "_id": {
+    "$oid": "65a4026754215cdec0f8c032"
+  },
+  "date": "14-01-2024",
+  "table": 2,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 4,
+      "note": ""
+    }
+  ],
+  "total": 220000,
+  "status": "New"
+},
+{
+  "_id": {
+    "$oid": "65a4147291d65820d7e1bbda"
+  },
+  "date": "15-01-2024",
+  "table": 2,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 5,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 5,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9baf",
+      "name": "Chocolate Milkshake",
+      "quantity": 5,
+      "note": ""
+    }
+  ],
+  "total": 700000,
+  "status": "New"
+},
+{
+  "_id": {
+    "$oid": "65a41554273ce24322218a9c"
+  },
+  "date": "15-01-2024",
+  "table": 2,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 6,
+      "note": ""
+    }
+  ],
+  "total": 330000,
+  "status": "New"
+},
+{
+  "_id": {
+    "$oid": "65a4163013661248a1d67064"
+  },
+  "date": "15-01-2024",
+  "table": 2,
+  "order": [
+    {
+      "_id": "657db0b516897c7e06b87e53",
+      "name": "Latte",
+      "quantity": 4,
+      "note": ""
+    }
+  ],
+  "total": 220000,
+  "status": "New"
+},
+{
+  "_id": {
+    "$oid": "65a48412f674c4a8005bcc8c"
+  },
+  "date": "15-01-2024",
+  "table": 3,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "65805ce202f3e0db3e2dc369",
+      "name": "Espresso",
+      "quantity": 6,
+      "note": ""
+    }
+  ],
+  "total": 295000,
+  "status": "New"
+},
+{
+  "_id": {
+    "$oid": "65a484fdf674c4a8005bcc8d"
+  },
+  "date": "15-01-2024",
+  "table": 6,
+  "order": [
+    {
+      "_id": "657db0b516897c7e06b87e53",
+      "name": "Latte",
+      "quantity": 5,
+      "note": ""
+    },
+    {
+      "_id": "65805ce202f3e0db3e2dc369",
+      "name": "Espresso",
+      "quantity": 6,
+      "note": ""
+    }
+  ],
+  "total": 515000,
+  "status": "New"
+},
+{
+  "_id": {
+    "$oid": "65a4888de08223c6f37ae952"
+  },
+  "date": "15-01-2024",
+  "table": 5,
+  "order": [
+    {
+      "_id": "65805cb602f3e0db3e2dc368",
+      "name": "Vietnamese Egg Coffee",
+      "quantity": 5,
+      "note": ""
+    },
+    {
+      "_id": "6582472bafbc36795113fe2e",
+      "name": "Americano",
+      "quantity": 10,
+      "note": ""
+    }
+  ],
+  "total": 625000,
+  "status": "New"
+},
+{
+  "_id": {
+    "$oid": "65a4f3beb1d3cb3a29b08efc"
+  },
+  "date": "15-01-2024",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 5,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 10,
+      "note": ""
+    }
+  ],
+  "total": 575000,
+  "status": "New"
+},
+{
+  "_id": {
+    "$oid": "65a5fde410021a219fd82376"
+  },
+  "date": "16-01-2024",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 2,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "total": 140000,
+  "status": "New"
+},
+{
+  "_id": {
+    "$oid": "65a6006910021a219fd82377"
+  },
+  "date": "16-01-2024",
+  "table": 1,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 2,
+      "note": "16/01/24"
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": "thêm đá"
+    }
+  ],
+  "total": 94000,
+  "status": "Done"
+},
+{
+  "_id": {
+    "$oid": "65a71c22d87d6f95e2f53a54"
+  },
+  "date": "17-01-2024",
+  "table": 4,
+  "order": [
+    {
+      "_id": "657919b4e4fb7c8534cc9bad",
+      "name": "Black Tea",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9ba9",
+      "name": "Cappucino",
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "_id": "657919b4e4fb7c8534cc9bab",
+      "name": "Vietnamese Black Coffee",
+      "quantity": 1,
+      "note": "khong duong"
+    }
+  ],
+  "total": 117000,
+  "status": "New"
+}]
